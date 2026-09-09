@@ -6,16 +6,6 @@
     "enabled": true
   },
   "assets": {
-    "directory": ".",
-    "exclude": [
-      ".git/**",
-      "node_modules/**",
-      "*.zip",
-      "WhatsApp Chat*/**",
-      ".DS_Store",
-      "wrangler.jsonc",
-      "*.log",
-      "*.tmp"
-    ]
+    "directory": "public"
   }
 }
