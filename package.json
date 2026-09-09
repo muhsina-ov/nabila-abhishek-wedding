@@ -2,6 +2,7 @@
   "name": "nabila-abhishek-wedding",
   "version": "1.0.0",
   "scripts": {
-    "build": "rm -rf public && mkdir -p public && rsync -a --exclude='.git' --exclude='*.zip' --exclude='node_modules' --exclude='public' --exclude='package.json' --exclude='package-lock.json' --exclude='wrangler.jsonc' --exclude='.DS_Store' --exclude='WhatsApp Chat*' --exclude='*.log' --exclude='*.tmp' . public/"
+    "build": "rm -rf public && mkdir -p public && rsync -a --exclude='.git' --exclude='*.zip' --exclude='node_modules' --exclude='public' --exclude='package.json' --exclude='package-lock.json' --exclude='wrangler.jsonc' --exclude='.DS_Store' --exclude='WhatsApp Chat*' --exclude='*.log' --exclude='*.tmp' . public/",
+    "deploy": "npm run build && npx wrangler deploy"
   }
 }
