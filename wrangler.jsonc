@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "nabila-abhishek-wedding",
+  "compatibility_date": "2026-09-08",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": ".",
+    "exclude": [
+      ".git/**",
+      "node_modules/**",
+      "*.zip",
+      "WhatsApp Chat*/**",
+      ".DS_Store",
+      "wrangler.jsonc",
+      "*.log",
+      "*.tmp"
+    ]
+  }
+}
