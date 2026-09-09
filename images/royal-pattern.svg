@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <style>
+      .g-main { stroke: #A67D2B; stroke-width: 0.85; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+      .g-fine { stroke: #C5A059; stroke-width: 0.55; fill: none; stroke-linecap: round; stroke-linejoin: round; opacity: 0.36; }
+      .g-fill { fill: #A67D2B; }
+    </style>
+  </defs>
+
+  <!-- ================= LATTICE SKELETON (Pointed Interlocking Ogives) ================= -->
+  <path d="M 0,60 C 12,38 38,12 60,0" class="g-main" opacity="0.15" />
+  <path d="M 120,60 C 108,38 82,12 60,0" class="g-main" opacity="0.15" />
+  <path d="M 0,60 C 12,82 38,108 60,120" class="g-main" opacity="0.15" />
+  <path d="M 120,60 C 108,82 82,108 60,120" class="g-main" opacity="0.15" />
+
+  <!-- Diagonal Counter-Arches to form the Corner Cells -->
+  <path d="M 0,0 C 22,12 48,38 60,60" class="g-main" opacity="0.15" />
+  <path d="M 120,0 C 98,12 72,38 60,60" class="g-main" opacity="0.15" />
+  <path d="M 0,120 C 22,108 48,82 60,60" class="g-main" opacity="0.15" />
+  <path d="M 120,120 C 98,108 72,82 60,60" class="g-main" opacity="0.15" />
+
+  <!-- Inner Delicate Concentric Cusps (Trefoil Arched Cusps) -->
+  <path d="M 8,60 C 18,44 44,18 60,8 C 76,18 102,44 112,60 C 102,76 76,102 60,112 C 44,102 18,76 8,60 Z" class="g-fine" />
+
+  <!-- Corner Cell Inner Cusps -->
+  <path d="M 0,8 C 16,18 42,44 52,60" class="g-fine" />
+  <path d="M 8,0 C 18,16 44,42 60,52" class="g-fine" />
+  <path d="M 120,8 C 104,18 78,44 68,60" class="g-fine" />
+  <path d="M 112,0 C 102,16 76,42 60,52" class="g-fine" />
+  <path d="M 0,112 C 16,102 42,76 52,60" class="g-fine" />
+  <path d="M 8,120 C 18,104 44,78 60,68" class="g-fine" />
+  <path d="M 120,112 C 104,102 78,76 68,60" class="g-fine" />
+  <path d="M 112,120 C 102,104 76,78 60,68" class="g-fine" />
+
+  <!-- ================= CENTER ROYAL DAMASK MEDALLION (60, 60) ================= -->
+  <circle cx="60" cy="60" r="6" class="g-main" opacity="0.192" />
+  <circle cx="60" cy="60" r="2.5" class="g-fill" opacity="0.168" />
+  
+  <!-- Royal Fleur & Lotus Petals -->
+  <path d="M 60,46 C 63,50 64,53 60,55 C 56,53 57,50 60,46 Z" class="g-fill" opacity="0.132" />
+  <circle cx="60" cy="43" r="1.2" class="g-fill" opacity="0.15" />
+  
+  <path d="M 60,74 C 63,70 64,67 60,65 C 56,67 57,70 60,74 Z" class="g-fill" opacity="0.132" />
+  <circle cx="60" cy="77" r="1.2" class="g-fill" opacity="0.15" />
+
+  <path d="M 46,60 C 50,63 53,64 55,60 C 53,56 50,57 46,60 Z" class="g-fill" opacity="0.132" />
+  <circle cx="43" cy="60" r="1.2" class="g-fill" opacity="0.15" />
+
+  <path d="M 74,60 C 70,63 67,64 65,60 C 67,56 70,57 74,60 Z" class="g-fill" opacity="0.132" />
+  <circle cx="77" cy="60" r="1.2" class="g-fill" opacity="0.15" />
+
+  <!-- Diagonal Tendril Scrolls -->
+  <path d="M 54,54 C 50,50 48,46 51,44 C 53,42 56,45 55,48" class="g-fine" />
+  <path d="M 66,54 C 70,50 72,46 69,44 C 67,42 64,45 65,48" class="g-fine" />
+  <path d="M 54,66 C 50,70 48,74 51,76 C 53,78 56,75 55,72" class="g-fine" />
+  <path d="M 66,66 C 70,70 72,74 69,76 C 67,78 64,75 65,72" class="g-fine" />
+
+  <!-- ================= 4 JUNCTION NODES ================= -->
+  <!-- Top & Bottom Nodes -->
+  <circle cx="60" cy="0" r="3.5" class="g-main" opacity="0.192" />
+  <circle cx="60" cy="0" r="1.4" class="g-fill" opacity="0.168" />
+  <polygon points="60,-5 62,0 60,5 58,0" class="g-fill" opacity="0.132" />
+  
+  <circle cx="60" cy="120" r="3.5" class="g-main" opacity="0.192" />
+  <circle cx="60" cy="120" r="1.4" class="g-fill" opacity="0.168" />
+  <polygon points="60,115 62,120 60,125 58,120" class="g-fill" opacity="0.132" />
+
+  <!-- Left & Right Nodes -->
+  <circle cx="0" cy="60" r="3.5" class="g-main" opacity="0.192" />
+  <circle cx="0" cy="60" r="1.4" class="g-fill" opacity="0.168" />
+  <polygon points="-5,60 0,62 5,60 0,58" class="g-fill" opacity="0.132" />
+
+  <circle cx="120" cy="60" r="3.5" class="g-main" opacity="0.192" />
+  <circle cx="120" cy="60" r="1.4" class="g-fill" opacity="0.168" />
+  <polygon points="115,60 120,62 125,60 120,58" class="g-fill" opacity="0.132" />
+
+  <!-- ================= 4 CORNER QUARTERS ================= -->
+  <circle cx="0" cy="0" r="6" class="g-main" opacity="0.192" />
+  <circle cx="0" cy="0" r="2.5" class="g-fill" opacity="0.168" />
+  <path d="M 0,14 C 3,10 4,7 0,5 C -3,7 -4,10 0,14 Z" class="g-fill" opacity="0.132" />
+  <circle cx="0" cy="17" r="1.2" class="g-fill" opacity="0.15" />
+  <path d="M 14,0 C 10,3 7,4 5,0 C 7,-3 10,-4 14,0 Z" class="g-fill" opacity="0.132" />
+  <circle cx="17" cy="0" r="1.2" class="g-fill" opacity="0.15" />
+  <path d="M 6,6 C 10,10 12,14 9,16 C 7,18 4,15 5,12" class="g-fine" />
+
+  <circle cx="120" cy="0" r="6" class="g-main" opacity="0.192" />
+  <circle cx="120" cy="0" r="2.5" class="g-fill" opacity="0.168" />
+  <path d="M 120,14 C 123,10 124,7 120,5 C 117,7 116,10 120,14 Z" class="g-fill" opacity="0.132" />
+  <circle cx="120" cy="17" r="1.2" class="g-fill" opacity="0.15" />
+  <path d="M 106,0 C 110,3 113,4 115,0 C 113,-3 110,-4 106,0 Z" class="g-fill" opacity="0.132" />
+  <circle cx="103" cy="0" r="1.2" class="g-fill" opacity="0.15" />
+  <path d="M 114,6 C 110,10 108,14 111,16 C 113,18 116,15 115,12" class="g-fine" />
+
+  <circle cx="0" cy="120" r="6" class="g-main" opacity="0.192" />
+  <circle cx="0" cy="120" r="2.5" class="g-fill" opacity="0.168" />
+  <path d="M 0,106 C 3,110 4,113 0,115 C -3,113 -4,110 0,106 Z" class="g-fill" opacity="0.132" />
+  <circle cx="0" cy="103" r="1.2" class="g-fill" opacity="0.15" />
+  <path d="M 14,120 C 10,123 7,124 5,120 C 7,117 10,116 14,120 Z" class="g-fill" opacity="0.132" />
+  <circle cx="17" cy="120" r="1.2" class="g-fill" opacity="0.15" />
+  <path d="M 6,114 C 10,110 12,106 9,104 C 7,102 4,105 5,108" class="g-fine" />
+
+  <circle cx="120" cy="120" r="6" class="g-main" opacity="0.192" />
+  <circle cx="120" cy="120" r="2.5" class="g-fill" opacity="0.168" />
+  <path d="M 120,106 C 123,110 124,113 120,115 C 117,113 116,110 120,106 Z" class="g-fill" opacity="0.132" />
+  <circle cx="120" cy="103" r="1.2" class="g-fill" opacity="0.15" />
+  <path d="M 106,120 C 110,123 113,124 115,120 C 113,117 110,116 106,120 Z" class="g-fill" opacity="0.132" />
+  <circle cx="103" cy="120" r="1.2" class="g-fill" opacity="0.15" />
+  <path d="M 114,114 C 110,110 108,106 111,104 C 113,102 116,105 115,108" class="g-fine" />
+</svg>
