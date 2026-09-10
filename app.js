@@ -676,28 +676,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-  /* ------------------------------------------------------------------------
-     7. FLOATING DOCK ACTIVE SECTION OBSERVER
-     ------------------------------------------------------------------------ */
-  const dockItems = document.querySelectorAll('.dock-item');
-  const sections  = document.querySelectorAll('header, section');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        dockItems.forEach(item => {
-          if (item.getAttribute('data-nav') === id) {
-            item.classList.add('active');
-          } else {
-            item.classList.remove('active');
-          }
-        });
-      }
-    });
-  }, { threshold: 0.3 });
-
-  sections.forEach(sec => observer.observe(sec));
 
 
   /* ------------------------------------------------------------------------
