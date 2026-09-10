@@ -105,10 +105,29 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Body lock while envelope overlay is active */
-body.envelope-active {
-  overflow: hidden;
-  height: 100vh;
+/* Body lock and content isolation while envelope/video is active */
+body.envelope-active,
+body.video-active {
+  overflow: hidden !important;
+  height: 100vh !important;
+  touch-action: none;
+}
+
+body.envelope-active #main-content,
+body.video-active #main-content,
+body.envelope-active .floating-dock,
+body.video-active .floating-dock,
+body.envelope-active #weiAudioBtn,
+body.video-active #weiAudioBtn {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+#main-content {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), visibility 1s ease;
 }
 
 img, video {
@@ -932,68 +951,186 @@ button {
 .couple-grid {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  gap: 30px;
-  align-items: center;
-  max-width: 1000px;
+  gap: 36px;
+  align-items: stretch;
+  max-width: 1080px;
   margin: 0 auto;
 }
 
 .couple-card {
   background: var(--bg-card);
   border: 1px solid var(--gold-border-rich);
-  border-radius: var(--radius-xl);
-  padding: 40px 30px;
+  border-radius: 28px;
+  padding: 32px 28px 36px;
   text-align: center;
   box-shadow: var(--shadow-card);
   position: relative;
   transition: transform var(--transition-base), box-shadow var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.couple-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
 }
 
 .couple-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-gold);
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-gold), 0 20px 45px rgba(90, 15, 27, 0.12);
 }
 
-.couple-avatar-wrap {
-  width: 180px;
-  height: 220px;
+/* Portrait Frame */
+.couple-portrait-frame {
+  width: 100%;
+  max-width: 280px;
+  height: 360px;
   margin: 0 auto 24px;
-  border-radius: 90px 90px 16px 16px;
+  border-radius: 140px 140px 24px 24px;
   overflow: hidden;
-  border: 2px solid var(--gold-light);
-  box-shadow: 0 8px 24px rgba(166, 125, 43, 0.15);
   position: relative;
+  box-shadow: 0 12px 30px rgba(90, 15, 27, 0.22), 0 4px 10px rgba(166, 125, 43, 0.2);
+  cursor: pointer;
+  background: #240C12;
 }
 
-.couple-avatar-img {
+.couple-portrait-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.6s ease;
+  object-position: center 18%;
+  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: block;
 }
 
-.couple-card:hover .couple-avatar-img {
-  transform: scale(1.05);
+.couple-card:hover .couple-portrait-img {
+  transform: scale(1.06);
+}
+
+.couple-frame-border {
+  position: absolute;
+  inset: 6px;
+  border-radius: 134px 134px 18px 18px;
+  border: 1.5px solid rgba(245, 215, 150, 0.65);
+  pointer-events: none;
+  box-shadow: inset 0 0 12px rgba(245, 215, 150, 0.25);
+}
+
+.couple-expand-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(36, 12, 18, 0.78);
+  border: 1px solid rgba(212, 175, 55, 0.7);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 3;
+}
+
+.couple-expand-btn:hover {
+  background: var(--burgundy-royal);
+  transform: scale(1.1);
+  border-color: #F5D796;
+}
+
+.couple-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .couple-role-tag {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-family: var(--font-royal);
   font-size: 11px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--burgundy-royal);
   background: rgba(90, 15, 27, 0.08);
-  padding: 4px 14px;
+  border: 1px solid rgba(139, 30, 47, 0.18);
+  padding: 5px 16px;
   border-radius: var(--radius-pill);
-  margin-bottom: 12px;
+  margin: 0 auto 12px;
+  width: fit-content;
 }
 
 .couple-name {
   font-family: var(--font-royal);
   font-size: 26px;
   color: var(--gold-primary);
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
+}
+
+/* Segmented Interactive Tabs */
+.couple-tabs {
+  display: flex;
+  background: rgba(90, 15, 27, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 9999px;
+  padding: 4px;
+  margin: 0 auto 18px;
+  max-width: 320px;
+  width: 100%;
+  gap: 4px;
+}
+
+.couple-tab-btn {
+  flex: 1;
+  padding: 7px 12px;
+  border: none;
+  background: transparent;
+  border-radius: 9999px;
+  font-family: var(--font-royal);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+.couple-tab-btn.active {
+  background: var(--burgundy-royal);
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(90, 15, 27, 0.3);
+}
+
+.couple-tab-pane {
+  display: none;
+  animation: fadeInPane 0.35s ease forwards;
+}
+
+.couple-tab-pane.active {
+  display: block;
+}
+
+@keyframes fadeInPane {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .couple-lineage {
@@ -1001,37 +1138,219 @@ button {
   font-size: 16px;
   color: var(--text-dark);
   line-height: 1.6;
+  margin-bottom: 12px;
 }
 
 .couple-lineage strong {
   color: var(--text-deep);
   font-family: var(--font-sans);
-  font-size: 14px;
+  font-size: 14.5px;
+  font-weight: 600;
 }
 
-/* Center Emblem (Royal Monogram Wax Seal) */
+.couple-roots-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--gold-deep);
+  font-weight: 500;
+  background: rgba(212, 175, 55, 0.1);
+  padding: 4px 12px;
+  border-radius: 9999px;
+}
+
+/* Gurmukhi Heritage Verse */
+.couple-gurmukhi-verse {
+  background: rgba(255, 248, 238, 0.85);
+  border: 1px dashed rgba(212, 175, 55, 0.5);
+  border-radius: 16px;
+  padding: 14px 16px;
+  text-align: center;
+}
+
+.gurmukhi-text {
+  font-family: "Gurmukhi MN", "Mukta Mahee", Georgia, serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--burgundy-royal);
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.gurmukhi-trans {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 13.5px;
+  color: var(--text-dark);
+  line-height: 1.45;
+  margin-bottom: 10px;
+}
+
+.verse-values-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+}
+
+.verse-values-chips span {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--gold-deep);
+  background: #FFFFFF;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  padding: 3px 10px;
+  border-radius: 9999px;
+}
+
+/* Center Emblem */
 .couple-center-emblem {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   z-index: 6;
+  text-align: center;
+}
+
+.wax-seal-container {
+  position: relative;
+  cursor: pointer;
+  padding: 8px;
 }
 
 .couple-wax-seal {
-  width: 96px;
+  width: 98px;
   height: auto;
   max-width: 100%;
   display: block;
   filter: drop-shadow(0 10px 22px rgba(70, 10, 20, 0.35)) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.15));
   transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.35s ease;
   user-select: none;
-  cursor: pointer;
 }
 
-.couple-wax-seal:hover {
-  transform: scale(1.08) rotate(-2deg);
-  filter: drop-shadow(0 14px 30px rgba(70, 10, 20, 0.48)) drop-shadow(0 4px 12px rgba(166, 125, 43, 0.25));
+.wax-seal-container:hover .couple-wax-seal {
+  transform: scale(1.1) rotate(-3deg);
+  filter: drop-shadow(0 14px 30px rgba(70, 10, 20, 0.5)) drop-shadow(0 4px 14px rgba(212, 175, 55, 0.4));
+}
+
+.wax-seal-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.3) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.wax-seal-container:hover .wax-seal-glow {
+  opacity: 1;
+}
+
+.couple-amp-text {
+  font-family: var(--font-script);
+  font-size: 42px;
+  color: var(--gold-primary);
+  margin: -6px 0 -2px;
+  line-height: 1;
+}
+
+.couple-scripture-mini {
+  font-family: var(--font-royal);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--burgundy-royal);
+  font-weight: 600;
+}
+
+/* Interactive Rose Petal Shower Bar */
+.couple-blessing-bar {
+  margin: 40px auto 0;
+  text-align: center;
+  max-width: 600px;
+}
+
+.btn-shower-blessings {
+  background: linear-gradient(135deg, #7A1526 0%, #4D0E19 100%);
+  border: 1.5px solid var(--gold-border-rich);
+  border-radius: 9999px;
+  color: #FFFFFF;
+  padding: 14px 28px;
+  font-family: var(--font-royal);
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(90, 15, 27, 0.35), 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shower-blessings:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 10px 28px rgba(90, 15, 27, 0.45), 0 0 15px rgba(212, 175, 55, 0.35);
+  border-color: #F5D796;
+}
+
+.btn-shower-blessings:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.shower-icon {
+  color: #FFA5B0;
+  font-size: 16px;
+  animation: heartPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes heartPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+
+.shower-counter-pill {
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 3px 12px;
+  border-radius: 9999px;
+  font-size: 11px;
+  color: #FFF2D6;
+  font-weight: 500;
+}
+
+.blessing-hint {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 13.5px;
+  color: var(--text-muted);
+  margin-top: 10px;
+}
+
+/* Floating Falling Petals (generated via JS) */
+.falling-petal {
+  position: fixed;
+  pointer-events: none;
+  z-index: 99999;
+  user-select: none;
+  will-change: transform, opacity;
+  animation: petalFall linear forwards;
+}
+
+@keyframes petalFall {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotate(0deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--drift-x, 80px), 100vh, 0) rotate(var(--rot, 360deg)) scale(0.6);
+  }
 }
 
 /* ==========================================================================
@@ -1349,7 +1668,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center 20%;
   transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
   display: block;
 }
@@ -1359,7 +1678,7 @@ button {
 }
 
 .event-card.event-theme-wedding .event-hero-img {
-  object-position: center 22%;
+  object-position: center 18%;
 }
 
 .event-card:hover .event-hero-img {
@@ -1675,6 +1994,191 @@ button {
   box-shadow: 0 6px 18px rgba(86, 15, 30, 0.4);
   transform: translateY(-1px);
   color: #FFFFFF;
+}
+
+/* Event Top Actions & Countdown Pill */
+.event-top-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.event-countdown-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(36, 12, 18, 0.78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.65);
+  padding: 6px 12px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+  font-family: var(--font-royal);
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  color: #F8EDD8;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.event-countdown-pill i {
+  color: #F5D796;
+  font-size: 11px;
+}
+
+/* Attire Header & Interactive Palette */
+.attire-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 3px;
+}
+
+.attire-palette {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 6px;
+  background: rgba(166, 125, 43, 0.08);
+  border-radius: 9999px;
+}
+
+.palette-dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  border: 1.5px solid #FFFFFF;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: help;
+}
+
+.palette-dot:hover {
+  transform: scale(1.4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Itinerary Toggle Button */
+.btn-card-itinerary {
+  border: 1.5px solid rgba(86, 15, 30, 0.35);
+  border-radius: 9999px;
+  background: rgba(86, 15, 30, 0.04);
+  color: #560F1E;
+  padding: 10px 16px;
+  font-family: var(--font-royal);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-card-itinerary i.fa-list-check {
+  font-size: 11px;
+  color: #8A2434;
+}
+
+.it-chevron {
+  font-size: 9px;
+  transition: transform 0.3s ease;
+}
+
+.btn-card-itinerary.active .it-chevron,
+.event-card.itinerary-open .it-chevron {
+  transform: rotate(180deg);
+}
+
+.btn-card-itinerary:hover,
+.event-card.itinerary-open .btn-card-itinerary {
+  background: #560F1E;
+  color: #FFFFFF;
+  border-color: #560F1E;
+  box-shadow: 0 4px 12px rgba(86, 15, 30, 0.25);
+}
+
+.btn-card-itinerary:hover i,
+.event-card.itinerary-open .btn-card-itinerary i {
+  color: #FFFFFF;
+}
+
+/* Expandable Ceremony Itinerary Drawer */
+.event-itinerary-drawer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1), padding 0.35s ease;
+  background: linear-gradient(180deg, #1C080E 0%, #15060B 100%);
+  border-top: 1px solid rgba(212, 175, 55, 0.25);
+  padding: 0 24px;
+}
+
+.event-itinerary-drawer.open {
+  max-height: 480px;
+  padding: 20px 24px 24px;
+}
+
+.itinerary-timeline {
+  position: relative;
+  padding-left: 20px;
+  border-left: 1.5px solid rgba(212, 175, 55, 0.35);
+  margin-left: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.itinerary-step {
+  position: relative;
+}
+
+.itinerary-step::before {
+  content: '';
+  position: absolute;
+  left: -26px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #E5C378;
+  border: 2px solid #1C080E;
+  box-shadow: 0 0 8px rgba(229, 195, 120, 0.6);
+}
+
+.step-time-badge {
+  font-family: var(--font-royal);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #F5D796;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.step-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.step-title {
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #FFFFFF;
+  margin-bottom: 2px;
+}
+
+.step-desc {
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.76);
+  line-height: 1.4;
+  margin: 0;
 }
 
 
@@ -2182,18 +2686,35 @@ button {
     display: none;
   }
 
-  .event-card-actions {
-    display: flex;
-    width: 100%;
-    gap: 10px;
+  .couple-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
+  .couple-center-emblem {
+    margin: -10px 0;
+  }
+
+  .couple-portrait-frame {
+    height: 320px;
+    max-width: 250px;
+  }
+
+  .event-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .btn-card-itinerary,
   .btn-card-add,
   .btn-card-map {
-    flex: 1;
+    flex: 1 1 calc(33.333% - 8px);
+    min-width: 90px;
     justify-content: center;
-    padding: 10px 14px;
-    font-size: 11.5px;
+    padding: 9px 8px;
+    font-size: 10.5px;
   }
   
   .dock-item span {

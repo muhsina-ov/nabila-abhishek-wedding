@@ -19,11 +19,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let sequenceStarted = false;
   let sequenceEnded = false;
+  let fallbackTimer = null;
+
+  // Prepare video for strict mobile browser autoplay policies
+  if (video) {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.setAttribute('playsinline', '');
+    video.setAttribute('webkit-playsinline', '');
+    video.setAttribute('x5-playsinline', '');
+  }
 
   if (window.location.search.includes('skip') || window.location.search.includes('gate=open')) {
     if (overlay) overlay.style.display = 'none';
     if (videoWrap) videoWrap.style.display = 'none';
-    document.body.classList.remove('envelope-active');
+    document.body.classList.remove('envelope-active', 'video-active');
     if (audioBtn) {
       audioBtn.style.visibility = 'visible';
       audioBtn.style.opacity = '1';
@@ -36,88 +47,124 @@ document.addEventListener('DOMContentLoaded', () => {
     if (sequenceStarted) return;
     sequenceStarted = true;
 
-    // 1. Smoothly fade out envelope cover
+    // Lock page and ensure content is hidden until video completes
+    document.body.classList.add('video-active');
+    document.body.classList.add('envelope-active');
+
+    // 1. Immediately trigger video playback directly within the user interaction callstack
+    if (video) {
+      video.muted = true;
+      video.currentTime = 0;
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          // Playback confirmed started
+        }).catch(err => {
+          console.warn('Video playback retry needed:', err);
+          video.muted = true;
+          video.play().catch(() => {
+            // If device policy strictly blocks video, transition smoothly after brief fallback
+            setTimeout(endInvitationSequence, 1500);
+          });
+        });
+      }
+    }
+
+    // 2. Smoothly cross-fade envelope into the playing video
     if (overlay) {
       overlay.style.opacity = '0';
       overlay.style.pointerEvents = 'none';
       setTimeout(() => {
         overlay.style.display = 'none';
-      }, 1400);
+      }, 800);
     }
 
-    // 2. Fade in wax seal breaking video
     if (videoWrap) {
       videoWrap.classList.add('wei-video-in');
     }
 
-    if (video) {
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(err => {
-          console.warn('Video auto-playback deferred:', err);
-          // If video playback fails on low-power mode, complete sequence gracefully
-          setTimeout(endInvitationSequence, 1200);
-        });
-      }
-    }
-
-    // 3. Play Ludovico Einaudi - Divenire soundtrack
+    // 3. Start background wedding melody directly within user gesture
     if (audio) {
       audio.volume = 1;
       const audioPromise = audio.play();
       if (audioPromise !== undefined) {
-        audioPromise.catch(err => {
+        audioPromise.then(() => {
+          if (iconPlay) iconPlay.style.display = 'none';
+          if (iconPause) iconPause.style.display = 'block';
+        }).catch(err => {
           console.warn('Audio auto-playback notice:', err);
         });
       }
     }
+
+    // 4. Safety fallback timer (Video length is ~6.0s; fallback at 6.8s ensures no guest is trapped)
+    fallbackTimer = setTimeout(() => {
+      endInvitationSequence();
+    }, 6800);
   }
 
   function endInvitationSequence() {
     if (sequenceEnded) return;
     sequenceEnded = true;
 
-    // Re-enable smooth scrolling on page
-    document.body.classList.remove('envelope-active');
+    if (fallbackTimer) {
+      clearTimeout(fallbackTimer);
+      fallbackTimer = null;
+    }
 
-    // Smoothly fade out the video
+    // Pin viewport directly to the top (Hero Artboard)
+    window.scrollTo({ top: 0, behavior: 'instant' });
+
+    // Smoothly fade out the video layer
     if (videoWrap) {
       videoWrap.classList.remove('wei-video-in');
       videoWrap.classList.add('wei-video-out');
       setTimeout(() => {
         videoWrap.style.display = 'none';
-      }, 1400);
+        if (video) video.pause();
+      }, 1200);
     }
 
-    // Reveal floating royal burgundy audio button
+    // Unveil the main site & Hero section with full scroll unlocked
+    document.body.classList.remove('envelope-active', 'video-active');
+
+    // Ensure hero swans video is playing
+    const heroVideo = document.querySelector('.hero-arched-video');
+    if (heroVideo) {
+      heroVideo.play().catch(() => {});
+    }
+
+    // Reveal floating royal audio widget
     if (audioBtn) {
       audioBtn.style.visibility = 'visible';
       audioBtn.style.opacity = '1';
     }
   }
 
-  // Trigger opening on tap or click
+  // Trigger opening on tap or click (debounced against mobile ghost clicks)
   if (overlay) {
-    overlay.addEventListener('click', startInvitationSequence);
-    overlay.addEventListener('touchstart', startInvitationSequence, { passive: true });
+    let touchHandled = false;
+    overlay.addEventListener('touchstart', () => {
+      touchHandled = true;
+      startInvitationSequence();
+    }, { passive: true });
+
+    overlay.addEventListener('click', () => {
+      if (touchHandled) return;
+      startInvitationSequence();
+    });
   }
 
-  // Allow guest to tap video to skip directly to invitation
-  if (videoWrap) {
-    videoWrap.addEventListener('click', endInvitationSequence);
-  }
-
-  // Fade out video 0.8 seconds before end
+  // Monitor video progress to smoothly reveal hero at the conclusion
   if (video) {
     video.addEventListener('timeupdate', () => {
-      if (video.duration && video.currentTime >= video.duration - 0.8 && !video.dataset.fading) {
+      if (video.duration && video.currentTime >= video.duration - 0.5 && !video.dataset.fading) {
         video.dataset.fading = '1';
         endInvitationSequence();
       }
     });
 
     video.addEventListener('ended', endInvitationSequence);
-    video.load();
   }
 
   // Floating Audio Toggle Button Handler
@@ -437,12 +484,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Event artwork hero media & expand buttons
-  const eventHeroMedias = document.querySelectorAll('.event-hero-media, .event-hero-expand-btn');
-  eventHeroMedias.forEach(elem => {
+  // Portrait & Event artwork hero media & expand buttons
+  const expandableMedias = document.querySelectorAll('.event-hero-media, .event-hero-expand-btn, .couple-portrait-frame, .couple-expand-btn');
+  expandableMedias.forEach(elem => {
     elem.addEventListener('click', (e) => {
       // Don't trigger if clicked on link or other interactive elements
-      if (e.target.closest('a')) return;
+      if (e.target.closest('a') || e.target.closest('.btn-card-itinerary') || e.target.closest('.cal-btn')) return;
       const targetWithData = elem.closest('[data-full]') || elem;
       const fullSrc = targetWithData.getAttribute('data-full');
       const caption = targetWithData.getAttribute('data-caption') || targetWithData.querySelector('img')?.alt || '';
@@ -451,6 +498,167 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  /* ------------------------------------------------------------------------
+     COUPLE TABS (Lineage vs Heritage Blessing)
+     ------------------------------------------------------------------------ */
+  const coupleTabBtns = document.querySelectorAll('.couple-tab-btn');
+  coupleTabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.couple-card');
+      if (!card) return;
+      const targetTab = btn.getAttribute('data-tab');
+
+      // Update button active state in this card
+      card.querySelectorAll('.couple-tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Update pane active state in this card
+      card.querySelectorAll('.couple-tab-pane').forEach(pane => {
+        if (pane.getAttribute('data-pane') === targetTab) {
+          pane.classList.add('active');
+        } else {
+          pane.classList.remove('active');
+        }
+      });
+    });
+  });
+
+  /* ------------------------------------------------------------------------
+     SHOWER BLESSINGS & ROSE PETALS (Interactive Couple Blessing)
+     ------------------------------------------------------------------------ */
+  const showerBtn = document.getElementById('btn-shower-blessings');
+  const waxSealInteractive = document.getElementById('wax-seal-interactive');
+  const blessingCountElem = document.getElementById('blessing-count');
+
+  let blessingCount = parseInt(localStorage.getItem('wedding_blessing_count') || '354', 10);
+  if (blessingCountElem) {
+    blessingCountElem.textContent = blessingCount.toLocaleString();
+  }
+
+  function triggerPetalShower() {
+    blessingCount++;
+    if (blessingCountElem) {
+      blessingCountElem.textContent = blessingCount.toLocaleString();
+    }
+    localStorage.setItem('wedding_blessing_count', blessingCount.toString());
+
+    if (showerBtn) {
+      showerBtn.style.transform = 'scale(0.96)';
+      setTimeout(() => { showerBtn.style.transform = ''; }, 200);
+    }
+
+    // Spawn 28 falling rose, marigold petals and golden sparkles
+    const petalColors = [
+      '#D92546', '#8B1E2F', '#FFA500', '#FFD700', '#FAD2E1', '#C71585', '#FFF0F5'
+    ];
+
+    const count = 30;
+    for (let i = 0; i < count; i++) {
+      const petal = document.createElement('div');
+      petal.className = 'falling-petal';
+
+      const isCircle = Math.random() > 0.6;
+      const size = Math.floor(Math.random() * 16) + 12;
+      const color = petalColors[Math.floor(Math.random() * petalColors.length)];
+      const startX = Math.random() * window.innerWidth;
+      const driftX = (Math.random() - 0.5) * 220 + 'px';
+      const duration = (Math.random() * 2.5 + 2.8) + 's';
+      const rot = (Math.random() * 720 - 360) + 'deg';
+
+      petal.style.left = `${startX}px`;
+      petal.style.top = '-20px';
+      petal.style.width = `${size}px`;
+      petal.style.height = `${isCircle ? size : size * 1.5}px`;
+      petal.style.backgroundColor = color;
+      petal.style.borderRadius = isCircle ? '50%' : '50% 0 50% 50%';
+      petal.style.boxShadow = '0 2px 6px rgba(0, 0, 0, 0.18)';
+      petal.style.setProperty('--drift-x', driftX);
+      petal.style.setProperty('--rot', rot);
+      petal.style.animationDuration = duration;
+
+      document.body.appendChild(petal);
+      setTimeout(() => petal.remove(), 5500);
+    }
+  }
+
+  if (showerBtn) showerBtn.addEventListener('click', triggerPetalShower);
+  if (waxSealInteractive) waxSealInteractive.addEventListener('click', triggerPetalShower);
+
+  /* ------------------------------------------------------------------------
+     EVENT CEREMONY ITINERARY ACCORDIONS
+     ------------------------------------------------------------------------ */
+  const itineraryBtns = document.querySelectorAll('.btn-card-itinerary');
+  itineraryBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const card = btn.closest('.event-card');
+      if (!card) return;
+      const drawer = card.querySelector('.event-itinerary-drawer');
+      if (!drawer) return;
+
+      const isOpen = drawer.classList.contains('open');
+
+      // Close all other itinerary drawers for sleek focus
+      document.querySelectorAll('.event-itinerary-drawer.open').forEach(d => {
+        if (d !== drawer) {
+          d.classList.remove('open');
+          const parent = d.closest('.event-card');
+          if (parent) {
+            parent.classList.remove('itinerary-open');
+            const toggle = parent.querySelector('.btn-card-itinerary');
+            if (toggle) {
+              toggle.classList.remove('active');
+              toggle.setAttribute('aria-expanded', 'false');
+            }
+          }
+        }
+      });
+
+      if (isOpen) {
+        drawer.classList.remove('open');
+        card.classList.remove('itinerary-open');
+        btn.classList.remove('active');
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        drawer.classList.add('open');
+        card.classList.add('itinerary-open');
+        btn.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  /* ------------------------------------------------------------------------
+     EVENT COUNTDOWN PILLS
+     ------------------------------------------------------------------------ */
+  const countdownPills = document.querySelectorAll('.event-countdown-pill');
+  function updateEventCountdowns() {
+    const now = new Date().getTime();
+    countdownPills.forEach(pill => {
+      const dateStr = pill.getAttribute('data-event-date');
+      if (!dateStr) return;
+      const targetTime = new Date(dateStr).getTime();
+      const diff = targetTime - now;
+
+      const cdText = pill.querySelector('.cd-text');
+      if (!cdText) return;
+
+      if (diff <= 0) {
+        cdText.textContent = 'Today!';
+      } else {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        if (days > 0) {
+          cdText.textContent = `${days}d ${hours}h`;
+        } else {
+          cdText.textContent = `${hours}h left`;
+        }
+      }
+    });
+  }
+  updateEventCountdowns();
+  setInterval(updateEventCountdowns, 60000);
 
   if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
   if (lightboxModal) {

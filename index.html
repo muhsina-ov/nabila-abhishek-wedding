@@ -65,6 +65,8 @@
            src="media/1782224012851.mp4"
            muted
            playsinline
+           webkit-playsinline
+           x5-playsinline
            preload="auto"></video>
   </div>
 
@@ -142,7 +144,7 @@
           <div class="hero-arch-inner-border"></div>
 
           <!-- Background Swans & Falling Petals Video -->
-          <video class="hero-arched-video" autoplay muted loop playsinline>
+          <video class="hero-arched-video" autoplay muted loop playsinline webkit-playsinline>
             <source src="media/Swans2.mov" type="video/mp4">
             Your browser does not support the video tag.
           </video>
@@ -234,47 +236,128 @@
       </div>
     </section>
 
-    <!-- ================= CHAPTER ONE: THE COUPLE (Royal Reception Style) ================= -->
+    <!-- ================= CHAPTER ONE: THE COUPLE (Royal Heritage Showcase) ================= -->
     <section class="section couple-section" id="couple">
       <div class="container">
         <div class="section-header">
           <span class="section-pretitle">Chapter One</span>
           <h2 class="section-title">The Two of Us</h2>
           <img src="images/cdn/acomm-decor.png" alt="Divider" class="section-divider-flourish">
-          <p class="section-lead">Together with the blessings of our beloved families</p>
+          <p class="section-lead">Together with the sacred blessings of God and our beloved families</p>
         </div>
 
         <div class="couple-grid">
           <!-- The Bride Card -->
-          <div class="couple-card">
-            <div class="couple-avatar-wrap">
-              <img src="assets/bride_portrait.jpg" alt="Nabila Khokhar" class="couple-avatar-img">
+          <div class="couple-card bride-card" data-couple="bride">
+            <div class="couple-portrait-frame" data-full="assets/bride_intro.jpg" data-caption="Nabila Khokhar — The Bride">
+              <img src="assets/bride_intro.jpg" alt="Nabila Khokhar - The Bride" class="couple-portrait-img">
+              <div class="couple-frame-border"></div>
+              <button class="couple-expand-btn" type="button" aria-label="View Full Portrait Artwork" data-full="assets/bride_intro.jpg" data-caption="Nabila Khokhar — The Bride">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+              </button>
             </div>
-            <span class="couple-role-tag">The Bride</span>
-            <h3 class="couple-name">Nabila Khokhar</h3>
-            <p class="couple-lineage">
-              Beloved daughter of<br>
-              <strong>Mrs. Dalfina Khokhar &amp; Mr. Noel Khokhar</strong>
-            </p>
+
+            <div class="couple-card-body">
+              <span class="couple-role-tag"><i class="fa-solid fa-gem"></i> The Bride</span>
+              <h3 class="couple-name">Nabila Khokhar</h3>
+
+              <!-- Interactive Tab Switcher -->
+              <div class="couple-tabs">
+                <button class="couple-tab-btn active" data-tab="lineage" type="button"><i class="fa-solid fa-heart"></i> Lineage</button>
+                <button class="couple-tab-btn" data-tab="blessing" type="button"><i class="fa-solid fa-scroll"></i> Heritage Blessing</button>
+              </div>
+
+              <!-- Tab 1: Lineage -->
+              <div class="couple-tab-pane active" data-pane="lineage">
+                <p class="couple-lineage">
+                  Beloved daughter of<br>
+                  <strong>Mrs. Dalfina Khokhar &amp; Mr. Noel Khokhar</strong>
+                </p>
+                <div class="couple-roots-badge">
+                  <i class="fa-solid fa-location-dot"></i> Chandigarh, Punjab
+                </div>
+              </div>
+
+              <!-- Tab 2: Blessing -->
+              <div class="couple-tab-pane" data-pane="blessing">
+                <div class="couple-gurmukhi-verse">
+                  <p class="gurmukhi-text">“ਰੱਬ ਦੀ ਮੇਹਰ ਨਾਲ ਸਾਡਾ ਸਫ਼ਰ ਹੋਰ ਵੀ ਸੋਹਣਾ ਹੋਇਆ”</p>
+                  <p class="gurmukhi-trans">“With God's grace, our journey became even more beautiful.”</p>
+                  <div class="verse-values-chips">
+                    <span>ਪਿਆਰ (Love)</span>
+                    <span>ਪਰਿਵਾਰ (Family)</span>
+                    <span>ਖੁਸ਼ੀਆਂ (Joy)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <!-- Central Monogram Emblem (Royal Wax Seal) -->
+          <!-- Central Monogram Emblem & Royal Ring -->
           <div class="couple-center-emblem">
-            <img src="images/wax_seal_na.png" alt="Nabila &amp; Abhishek Monogram Wax Seal" class="couple-wax-seal" loading="lazy">
+            <div class="wax-seal-container" id="wax-seal-interactive" title="Click to shower royal blessings!">
+              <img src="images/wax_seal_na.png" alt="Nabila &amp; Abhishek Monogram Wax Seal" class="couple-wax-seal" id="couple-wax-seal" loading="lazy">
+              <div class="wax-seal-glow"></div>
+            </div>
+            <div class="couple-amp-text">&amp;</div>
+            <p class="couple-scripture-mini">Two Souls • One Destiny</p>
           </div>
 
           <!-- The Groom Card -->
-          <div class="couple-card">
-            <div class="couple-avatar-wrap">
-              <img src="assets/groom_portrait.jpg" alt="Abhishek Joshua" class="couple-avatar-img">
+          <div class="couple-card groom-card" data-couple="groom">
+            <div class="couple-portrait-frame" data-full="assets/groom_intro.jpg" data-caption="Abhishek Joshua — The Groom">
+              <img src="assets/groom_intro.jpg" alt="Abhishek Joshua - The Groom" class="couple-portrait-img">
+              <div class="couple-frame-border"></div>
+              <button class="couple-expand-btn" type="button" aria-label="View Full Portrait Artwork" data-full="assets/groom_intro.jpg" data-caption="Abhishek Joshua — The Groom">
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+              </button>
             </div>
-            <span class="couple-role-tag">The Groom</span>
-            <h3 class="couple-name">Abhishek Joshua</h3>
-            <p class="couple-lineage">
-              Cherished son of<br>
-              <strong>Late Mrs. Deepika Singh &amp; Mr. Yashpal</strong>
-            </p>
+
+            <div class="couple-card-body">
+              <span class="couple-role-tag"><i class="fa-solid fa-crown"></i> The Groom</span>
+              <h3 class="couple-name">Abhishek Joshua</h3>
+
+              <!-- Interactive Tab Switcher -->
+              <div class="couple-tabs">
+                <button class="couple-tab-btn active" data-tab="lineage" type="button"><i class="fa-solid fa-heart"></i> Lineage</button>
+                <button class="couple-tab-btn" data-tab="blessing" type="button"><i class="fa-solid fa-scroll"></i> Heritage Blessing</button>
+              </div>
+
+              <!-- Tab 1: Lineage -->
+              <div class="couple-tab-pane active" data-pane="lineage">
+                <p class="couple-lineage">
+                  Cherished son of<br>
+                  <strong>Late Mrs. Deepika Singh &amp; Mr. Yashpal</strong>
+                </p>
+                <div class="couple-roots-badge">
+                  <i class="fa-solid fa-location-dot"></i> Chandigarh, Punjab
+                </div>
+              </div>
+
+              <!-- Tab 2: Blessing -->
+              <div class="couple-tab-pane" data-pane="blessing">
+                <div class="couple-gurmukhi-verse">
+                  <p class="gurmukhi-text">“ਸਾਡੀ ਮਿੱਟੀ ਸਾਡੇ ਲੋਕ ਸਾਡੀਆਂ ਖੁਸ਼ੀਆਂ ਹੋਰ ਸੋਹਣੀਆਂ ਬਣਾਉਂਦੇ ਨੇ”</p>
+                  <p class="gurmukhi-trans">“Our heritage &amp; our loved ones make our joys even more beautiful.”</p>
+                  <div class="verse-values-chips">
+                    <span>ਪਿਆਰ (Love)</span>
+                    <span>ਰਿਸ਼ਤੇ (Bonds)</span>
+                    <span>ਸਦਾ ਨਾਲ (Forever)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <!-- Interactive Rose Petal & Blessings Shower Bar -->
+        <div class="couple-blessing-bar">
+          <button class="btn-shower-blessings" id="btn-shower-blessings" type="button" aria-label="Shower Rose Petals and Blessings">
+            <span class="shower-icon"><i class="fa-solid fa-heart"></i></span>
+            <span class="shower-text">Shower Rose Petals &amp; Blessings</span>
+            <span class="shower-counter-pill"><span id="blessing-count">354</span> blessings showered</span>
+          </button>
+          <p class="blessing-hint">Tap to shower fragrant rose petals, marigolds &amp; golden stardust over the couple</p>
         </div>
       </div>
     </section>
@@ -377,7 +460,7 @@
         <div class="events-grid">
           <!-- Event 1: Haldi Ceremony -->
           <div class="event-card event-theme-haldi" data-event-day="oct15">
-            <div class="event-hero-media" data-full="assets/haldi_retina.png" data-caption="Haldi Ceremony — Colours of Love">
+            <div class="event-hero-media" data-full="assets/haldi_retina.png" data-caption="Haldi Ceremony — “Golden moments before forever.”">
               <img src="assets/haldi_retina.png" srcset="assets/haldi.png 1x, assets/haldi_retina.png 2x" alt="Haldi Ceremony" class="event-hero-img" loading="lazy">
               <div class="event-hero-gradient"></div>
               
@@ -388,15 +471,20 @@
                   </svg>
                   <span>CELEBRATION 01</span>
                 </div>
-                <button class="event-hero-expand-btn" type="button" aria-label="Enlarge Haldi illustration" title="View Full Artwork" data-full="assets/haldi_retina.png" data-caption="Haldi Ceremony — Colours of Love">
-                  <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-                </button>
+                <div class="event-top-actions">
+                  <div class="event-countdown-pill" data-event-date="2026-10-15T12:00:00" title="Celebration Countdown">
+                    <i class="fa-regular fa-clock"></i> <span class="cd-text">Oct 15</span>
+                  </div>
+                  <button class="event-hero-expand-btn" type="button" aria-label="Enlarge Haldi illustration" title="View Full Artwork" data-full="assets/haldi_retina.png" data-caption="Haldi Ceremony — “Golden moments before forever.”">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                  </button>
+                </div>
               </div>
 
               <div class="event-hero-bottom-overlay">
                 <div class="event-hero-info">
                   <h3 class="event-hero-title">Haldi Ceremony</h3>
-                  <p class="event-hero-motto">'Let the colours paint a brighter tomorrow'</p>
+                  <p class="event-hero-motto">“Golden moments before forever.”</p>
                   <div class="event-hero-venue">
                     <i class="fa-solid fa-location-dot"></i>
                     <span>Community Centre, Sector 37 C, Chandigarh</span>
@@ -422,25 +510,62 @@
                   </svg>
                 </div>
                 <div class="attire-text-wrap">
-                  <span class="attire-micro-label">ATTIRE</span>
+                  <div class="attire-header-row">
+                    <span class="attire-micro-label">ATTIRE</span>
+                    <div class="attire-palette" title="Suggested Color Shades">
+                      <span class="palette-dot" style="background: #E5A93C;" title="Mustard Gold"></span>
+                      <span class="palette-dot" style="background: #FFA500;" title="Marigold Orange"></span>
+                      <span class="palette-dot" style="background: #FFF8DC;" title="Sunny Ivory"></span>
+                    </div>
+                  </div>
                   <span class="attire-description">Yellow Kurta &amp; Bright Sunny Traditional</span>
                 </div>
               </div>
               <div class="attire-divider"></div>
               <div class="event-card-actions">
-                <button class="btn-card-add cal-btn" data-title="Haldi Ceremony | Nabila & Abhishek" data-start="2026-10-15T12:00:00" data-end="2026-10-15T16:00:00" data-location="Community Centre, Sector 37 C, Chandigarh">
+                <button class="btn-card-itinerary" type="button" aria-expanded="false" title="Toggle Ceremony Itinerary">
+                  <i class="fa-solid fa-list-check"></i> SCHEDULE <i class="fa-solid fa-chevron-down it-chevron"></i>
+                </button>
+                <button class="btn-card-add cal-btn" data-title="Haldi Ceremony | Nabila & Abhishek" data-start="2026-10-15T12:00:00" data-end="2026-10-15T16:00:00" data-location="Community Centre, Sector 37 C, Chandigarh" title="Add to Calendar">
                   <i class="fa-regular fa-calendar-plus"></i> ADD
                 </button>
-                <a href="https://share.google/kuKT6wvcRRdWBEgXV" target="_blank" rel="noopener noreferrer" class="btn-card-map">
-                  <i class="fa-solid fa-diamond-turn-right"></i> VIEW MAP
+                <a href="https://share.google/kuKT6wvcRRdWBEgXV" target="_blank" rel="noopener noreferrer" class="btn-card-map" title="Navigate on Google Maps">
+                  <i class="fa-solid fa-diamond-turn-right"></i> MAP
                 </a>
+              </div>
+            </div>
+
+            <!-- Expandable Ceremony Itinerary Drawer -->
+            <div class="event-itinerary-drawer">
+              <div class="itinerary-timeline">
+                <div class="itinerary-step">
+                  <div class="step-time-badge">12:00 PM</div>
+                  <div class="step-details">
+                    <strong class="step-title">Welcome Dhol &amp; Drinks</strong>
+                    <p class="step-desc">Guest arrivals with chilled thandai, coolers and spirited dhol beats</p>
+                  </div>
+                </div>
+                <div class="itinerary-step">
+                  <div class="step-time-badge">01:00 PM</div>
+                  <div class="step-details">
+                    <strong class="step-title">Haldi Ritual &amp; Flower Shower</strong>
+                    <p class="step-desc">Auspicious turmeric application, blessings, and fragrant marigold petal shower</p>
+                  </div>
+                </div>
+                <div class="itinerary-step">
+                  <div class="step-time-badge">02:30 PM</div>
+                  <div class="step-details">
+                    <strong class="step-title">Traditional Feast</strong>
+                    <p class="step-desc">Celebratory traditional lunch celebrating rich regional flavors</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Event 2: Sangeet & Musical Night -->
           <div class="event-card event-theme-sangeet" data-event-day="oct15">
-            <div class="event-hero-media" data-full="assets/sangeet_retina.png" data-caption="Sangeet &amp; Musical Night — Music Moves Us">
+            <div class="event-hero-media" data-full="assets/sangeet_retina.png" data-caption="Sangeet &amp; Musical Night — “Tonight we dance. Tomorrow we say ‘I do.’”">
               <img src="assets/sangeet_retina.png" srcset="assets/sangeet.png 1x, assets/sangeet_retina.png 2x" alt="Sangeet & Musical Night" class="event-hero-img" loading="lazy">
               <div class="event-hero-gradient"></div>
               
@@ -451,15 +576,20 @@
                   </svg>
                   <span>CELEBRATION 02</span>
                 </div>
-                <button class="event-hero-expand-btn" type="button" aria-label="Enlarge Sangeet illustration" title="View Full Artwork" data-full="assets/sangeet_retina.png" data-caption="Sangeet &amp; Musical Night — Music Moves Us">
-                  <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-                </button>
+                <div class="event-top-actions">
+                  <div class="event-countdown-pill" data-event-date="2026-10-15T19:00:00" title="Celebration Countdown">
+                    <i class="fa-regular fa-clock"></i> <span class="cd-text">Oct 15</span>
+                  </div>
+                  <button class="event-hero-expand-btn" type="button" aria-label="Enlarge Sangeet illustration" title="View Full Artwork" data-full="assets/sangeet_retina.png" data-caption="Sangeet &amp; Musical Night — “Tonight we dance. Tomorrow we say ‘I do.’”">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                  </button>
+                </div>
               </div>
 
               <div class="event-hero-bottom-overlay">
                 <div class="event-hero-info">
                   <h3 class="event-hero-title">Sangeet &amp; Musical Night</h3>
-                  <p class="event-hero-motto">'Music moves us — dance under glittering starlight'</p>
+                  <p class="event-hero-motto">“Tonight we dance. Tomorrow we say ‘I do.’”</p>
                   <div class="event-hero-venue">
                     <i class="fa-solid fa-location-dot"></i>
                     <span>Community Centre, Sector 37 C, Chandigarh</span>
@@ -485,25 +615,62 @@
                   </svg>
                 </div>
                 <div class="attire-text-wrap">
-                  <span class="attire-micro-label">ATTIRE</span>
+                  <div class="attire-header-row">
+                    <span class="attire-micro-label">ATTIRE</span>
+                    <div class="attire-palette" title="Suggested Color Shades">
+                      <span class="palette-dot" style="background: #111111;" title="Midnight Tux Black"></span>
+                      <span class="palette-dot" style="background: #C0C0C0;" title="Glittering Silver"></span>
+                      <span class="palette-dot" style="background: #3B2F44;" title="Velvet Plum"></span>
+                    </div>
+                  </div>
                   <span class="attire-description">Black Western / Evening Club Glamour</span>
                 </div>
               </div>
               <div class="attire-divider"></div>
               <div class="event-card-actions">
-                <button class="btn-card-add cal-btn" data-title="Sangeet & Musical Night | Nabila & Abhishek" data-start="2026-10-15T19:00:00" data-end="2026-10-15T23:30:00" data-location="Community Centre, Sector 37 C, Chandigarh">
+                <button class="btn-card-itinerary" type="button" aria-expanded="false" title="Toggle Ceremony Itinerary">
+                  <i class="fa-solid fa-list-check"></i> SCHEDULE <i class="fa-solid fa-chevron-down it-chevron"></i>
+                </button>
+                <button class="btn-card-add cal-btn" data-title="Sangeet & Musical Night | Nabila & Abhishek" data-start="2026-10-15T19:00:00" data-end="2026-10-15T23:30:00" data-location="Community Centre, Sector 37 C, Chandigarh" title="Add to Calendar">
                   <i class="fa-regular fa-calendar-plus"></i> ADD
                 </button>
-                <a href="https://share.google/kuKT6wvcRRdWBEgXV" target="_blank" rel="noopener noreferrer" class="btn-card-map">
-                  <i class="fa-solid fa-diamond-turn-right"></i> VIEW MAP
+                <a href="https://share.google/kuKT6wvcRRdWBEgXV" target="_blank" rel="noopener noreferrer" class="btn-card-map" title="Navigate on Google Maps">
+                  <i class="fa-solid fa-diamond-turn-right"></i> MAP
                 </a>
+              </div>
+            </div>
+
+            <!-- Expandable Ceremony Itinerary Drawer -->
+            <div class="event-itinerary-drawer">
+              <div class="itinerary-timeline">
+                <div class="itinerary-step">
+                  <div class="step-time-badge">07:00 PM</div>
+                  <div class="step-details">
+                    <strong class="step-title">Red Carpet Welcome</strong>
+                    <p class="step-desc">Welcome refreshments, red carpet photo booth and sparkling cocktails</p>
+                  </div>
+                </div>
+                <div class="itinerary-step">
+                  <div class="step-time-badge">08:15 PM</div>
+                  <div class="step-details">
+                    <strong class="step-title">Family Dances &amp; Couple Showcase</strong>
+                    <p class="step-desc">Special musical choreographies, romantic couple waltz &amp; friendly dance battles</p>
+                  </div>
+                </div>
+                <div class="itinerary-step">
+                  <div class="step-time-badge">09:45 PM</div>
+                  <div class="step-details">
+                    <strong class="step-title">Open DJ Floor &amp; Feast</strong>
+                    <p class="step-desc">Glittering dance floor beats, signature mocktails &amp; gourmet dinner spread</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Event 3: The Wedding Ceremony -->
           <div class="event-card event-theme-wedding" data-event-day="oct17">
-            <div class="event-hero-media" data-full="assets/wedding_retina.png" data-caption="The Wedding Ceremony — One Promise">
+            <div class="event-hero-media" data-full="assets/wedding_retina.png" data-caption="The Wedding Ceremony — “From this day forward, our story becomes one.”">
               <img src="assets/wedding_retina.png" srcset="assets/wedding.png 1x, assets/wedding_retina.png 2x" alt="The Wedding Ceremony" class="event-hero-img" loading="lazy">
               <div class="event-hero-gradient"></div>
               
@@ -514,15 +681,20 @@
                   </svg>
                   <span>CELEBRATION 03</span>
                 </div>
-                <button class="event-hero-expand-btn" type="button" aria-label="Enlarge Wedding illustration" title="View Full Artwork" data-full="assets/wedding_retina.png" data-caption="The Wedding Ceremony — One Promise">
-                  <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-                </button>
+                <div class="event-top-actions">
+                  <div class="event-countdown-pill" data-event-date="2026-10-17T11:00:00" title="Celebration Countdown">
+                    <i class="fa-regular fa-clock"></i> <span class="cd-text">Oct 17</span>
+                  </div>
+                  <button class="event-hero-expand-btn" type="button" aria-label="Enlarge Wedding illustration" title="View Full Artwork" data-full="assets/wedding_retina.png" data-caption="The Wedding Ceremony — “From this day forward, our story becomes one.”">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                  </button>
+                </div>
               </div>
 
               <div class="event-hero-bottom-overlay">
                 <div class="event-hero-info">
                   <h3 class="event-hero-title">The Wedding Ceremony</h3>
-                  <p class="event-hero-motto">'Solemn Christian Altar vows sealed under sacred grace'</p>
+                  <p class="event-hero-motto">“From this day forward, our story becomes one.”</p>
                   <div class="event-hero-venue">
                     <i class="fa-solid fa-location-dot"></i>
                     <span>Albion Farms, Morni Hills</span>
@@ -548,25 +720,69 @@
                   </svg>
                 </div>
                 <div class="attire-text-wrap">
-                  <span class="attire-micro-label">ATTIRE</span>
+                  <div class="attire-header-row">
+                    <span class="attire-micro-label">ATTIRE</span>
+                    <div class="attire-palette" title="Suggested Color Shades">
+                      <span class="palette-dot" style="background: #FFFFFF; border: 1px solid #ddd;" title="Pristine White"></span>
+                      <span class="palette-dot" style="background: #F4E7D7;" title="Champagne Cream"></span>
+                      <span class="palette-dot" style="background: #E8D3D1;" title="Blush Pastel"></span>
+                    </div>
+                  </div>
                   <span class="attire-description">Pristine Pastels / Formal Suits &amp; Gowns</span>
                 </div>
               </div>
               <div class="attire-divider"></div>
               <div class="event-card-actions">
-                <button class="btn-card-add cal-btn" data-title="The Wedding Ceremony | Nabila & Abhishek" data-start="2026-10-17T11:00:00" data-end="2026-10-17T14:30:00" data-location="Albion Farms, Morni Hills">
+                <button class="btn-card-itinerary" type="button" aria-expanded="false" title="Toggle Ceremony Itinerary">
+                  <i class="fa-solid fa-list-check"></i> SCHEDULE <i class="fa-solid fa-chevron-down it-chevron"></i>
+                </button>
+                <button class="btn-card-add cal-btn" data-title="The Wedding Ceremony | Nabila & Abhishek" data-start="2026-10-17T11:00:00" data-end="2026-10-17T14:30:00" data-location="Albion Farms, Morni Hills" title="Add to Calendar">
                   <i class="fa-regular fa-calendar-plus"></i> ADD
                 </button>
-                <a href="https://share.google/f7U3PLcKP9EvTZAcA" target="_blank" rel="noopener noreferrer" class="btn-card-map">
-                  <i class="fa-solid fa-diamond-turn-right"></i> VIEW MAP
+                <a href="https://share.google/f7U3PLcKP9EvTZAcA" target="_blank" rel="noopener noreferrer" class="btn-card-map" title="Navigate on Google Maps">
+                  <i class="fa-solid fa-diamond-turn-right"></i> MAP
                 </a>
+              </div>
+            </div>
+
+            <!-- Expandable Ceremony Itinerary Drawer -->
+            <div class="event-itinerary-drawer">
+              <div class="itinerary-timeline">
+                <div class="itinerary-step">
+                  <div class="step-time-badge">11:00 AM</div>
+                  <div class="step-details">
+                    <strong class="step-title">The Bridal Processional</strong>
+                    <p class="step-desc">Seating of guests, entrance of the groom &amp; bridal walk down the scenic aisle</p>
+                  </div>
+                </div>
+                <div class="itinerary-step">
+                  <div class="step-time-badge">11:30 AM</div>
+                  <div class="step-details">
+                    <strong class="step-title">Solemn Altar Vows &amp; Rings</strong>
+                    <p class="step-desc">Christian holy ceremony, scripture readings, exchange of eternal vows and rings</p>
+                  </div>
+                </div>
+                <div class="itinerary-step">
+                  <div class="step-time-badge">12:30 PM</div>
+                  <div class="step-details">
+                    <strong class="step-title">Sacred Blessings &amp; Portraits</strong>
+                    <p class="step-desc">Family blessings, congratulatory hugs, and group photography amidst nature</p>
+                  </div>
+                </div>
+                <div class="itinerary-step">
+                  <div class="step-time-badge">01:30 PM</div>
+                  <div class="step-details">
+                    <strong class="step-title">Royal Garden Luncheon</strong>
+                    <p class="step-desc">Sumptuous outdoor garden feast celebrating the newly wedded couple</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Event 4: Morni Grand Reception (Matches User Reference Image) -->
           <div class="event-card event-theme-morni" data-event-day="oct17">
-            <div class="event-hero-media" data-full="assets/morni_reception_retina.png" data-caption="Morni Grand Reception — Under The Stars">
+            <div class="event-hero-media" data-full="assets/morni_reception_retina.png" data-caption="Morni Grand Reception — “The vows have been spoken, now let the celebration begin.”">
               <img src="assets/morni_reception_retina.png" srcset="assets/morni_reception.png 1x, assets/morni_reception_retina.png 2x" alt="Morni Grand Reception" class="event-hero-img" loading="lazy">
               <div class="event-hero-gradient"></div>
               
@@ -577,15 +793,20 @@
                   </svg>
                   <span>CELEBRATION 04</span>
                 </div>
-                <button class="event-hero-expand-btn" type="button" aria-label="Enlarge Morni Reception illustration" title="View Full Artwork" data-full="assets/morni_reception_retina.png" data-caption="Morni Grand Reception — Under The Stars">
-                  <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-                </button>
+                <div class="event-top-actions">
+                  <div class="event-countdown-pill" data-event-date="2026-10-17T19:00:00" title="Celebration Countdown">
+                    <i class="fa-regular fa-clock"></i> <span class="cd-text">Oct 17</span>
+                  </div>
+                  <button class="event-hero-expand-btn" type="button" aria-label="Enlarge Morni Reception illustration" title="View Full Artwork" data-full="assets/morni_reception_retina.png" data-caption="Morni Grand Reception — “The vows have been spoken, now let the celebration begin.”">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                  </button>
+                </div>
               </div>
 
               <div class="event-hero-bottom-overlay">
                 <div class="event-hero-info">
                   <h3 class="event-hero-title">Morni Grand Reception</h3>
-                  <p class="event-hero-motto">'Starlit toasts, candlelit mountain breeze &amp; royal feast'</p>
+                  <p class="event-hero-motto">“The vows have been spoken, now let the celebration begin.”</p>
                   <div class="event-hero-venue">
                     <i class="fa-solid fa-location-dot"></i>
                     <span>Albion Farms, Morni Hills</span>
@@ -611,25 +832,62 @@
                   </svg>
                 </div>
                 <div class="attire-text-wrap">
-                  <span class="attire-micro-label">ATTIRE</span>
+                  <div class="attire-header-row">
+                    <span class="attire-micro-label">ATTIRE</span>
+                    <div class="attire-palette" title="Suggested Color Shades">
+                      <span class="palette-dot" style="background: #5C1D24;" title="Wine Burgundy"></span>
+                      <span class="palette-dot" style="background: #BBA0CA;" title="Royal Lavender"></span>
+                      <span class="palette-dot" style="background: #D4AF37;" title="Warm Gold"></span>
+                    </div>
+                  </div>
                   <span class="attire-description">Wine Lehenga &amp; Lavender Royal Sherwani</span>
                 </div>
               </div>
               <div class="attire-divider"></div>
               <div class="event-card-actions">
-                <button class="btn-card-add cal-btn" data-title="Morni Grand Reception | Nabila & Abhishek" data-start="2026-10-17T19:00:00" data-end="2026-10-17T23:45:00" data-location="Albion Farms, Morni Hills">
+                <button class="btn-card-itinerary" type="button" aria-expanded="false" title="Toggle Ceremony Itinerary">
+                  <i class="fa-solid fa-list-check"></i> SCHEDULE <i class="fa-solid fa-chevron-down it-chevron"></i>
+                </button>
+                <button class="btn-card-add cal-btn" data-title="Morni Grand Reception | Nabila & Abhishek" data-start="2026-10-17T19:00:00" data-end="2026-10-17T23:45:00" data-location="Albion Farms, Morni Hills" title="Add to Calendar">
                   <i class="fa-regular fa-calendar-plus"></i> ADD
                 </button>
-                <a href="https://share.google/f7U3PLcKP9EvTZAcA" target="_blank" rel="noopener noreferrer" class="btn-card-map">
-                  <i class="fa-solid fa-diamond-turn-right"></i> VIEW MAP
+                <a href="https://share.google/f7U3PLcKP9EvTZAcA" target="_blank" rel="noopener noreferrer" class="btn-card-map" title="Navigate on Google Maps">
+                  <i class="fa-solid fa-diamond-turn-right"></i> MAP
                 </a>
+              </div>
+            </div>
+
+            <!-- Expandable Ceremony Itinerary Drawer -->
+            <div class="event-itinerary-drawer">
+              <div class="itinerary-timeline">
+                <div class="itinerary-step">
+                  <div class="step-time-badge">07:00 PM</div>
+                  <div class="step-details">
+                    <strong class="step-title">Sunset Welcome &amp; Toasts</strong>
+                    <p class="step-desc">Mountain breeze cocktails, canapés, and live acoustic melodies</p>
+                  </div>
+                </div>
+                <div class="itinerary-step">
+                  <div class="step-time-badge">08:00 PM</div>
+                  <div class="step-details">
+                    <strong class="step-title">Grand Couple Entrance &amp; Cake</strong>
+                    <p class="step-desc">Dramatic starlight entrance of the bride &amp; groom, cake cutting &amp; champagne toast</p>
+                  </div>
+                </div>
+                <div class="itinerary-step">
+                  <div class="step-time-badge">08:45 PM</div>
+                  <div class="step-details">
+                    <strong class="step-title">Starlight Gala Banquet &amp; Music</strong>
+                    <p class="step-desc">Fine gourmet dinner under fairy lights, warm speeches, and dancing under the stars</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Event 5: Chandigarh Grand Reception -->
           <div class="event-card event-theme-chandigarh" data-event-day="oct18">
-            <div class="event-hero-media" data-full="assets/chandigarh_reception_retina.png" data-caption="Chandigarh Grand Reception — New Stories">
+            <div class="event-hero-media" data-full="assets/chandigarh_reception_retina.png" data-caption="Chandigarh Grand Reception — “A lifetime of love, a night worthy of celebration.”">
               <img src="assets/chandigarh_reception_retina.png" srcset="assets/chandigarh_reception.png 1x, assets/chandigarh_reception_retina.png 2x" alt="Chandigarh Grand Reception" class="event-hero-img" loading="lazy">
               <div class="event-hero-gradient"></div>
               
@@ -640,15 +898,20 @@
                   </svg>
                   <span>CELEBRATION 05</span>
                 </div>
-                <button class="event-hero-expand-btn" type="button" aria-label="Enlarge Chandigarh Reception illustration" title="View Full Artwork" data-full="assets/chandigarh_reception_retina.png" data-caption="Chandigarh Grand Reception — New Stories">
-                  <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
-                </button>
+                <div class="event-top-actions">
+                  <div class="event-countdown-pill" data-event-date="2026-10-18T18:00:00" title="Celebration Countdown">
+                    <i class="fa-regular fa-clock"></i> <span class="cd-text">Oct 18</span>
+                  </div>
+                  <button class="event-hero-expand-btn" type="button" aria-label="Enlarge Chandigarh Reception illustration" title="View Full Artwork" data-full="assets/chandigarh_reception_retina.png" data-caption="Chandigarh Grand Reception — “A lifetime of love, a night worthy of celebration.”">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                  </button>
+                </div>
               </div>
 
               <div class="event-hero-bottom-overlay">
                 <div class="event-hero-info">
                   <h3 class="event-hero-title">Chandigarh Grand Reception</h3>
-                  <p class="event-hero-motto">'Welcoming family &amp; friends for heartfelt blessings'</p>
+                  <p class="event-hero-motto">“A lifetime of love, a night worthy of celebration.”</p>
                   <div class="event-hero-venue">
                     <i class="fa-solid fa-location-dot"></i>
                     <span>Community Centre, Sector 37 C, Chandigarh</span>
@@ -674,18 +937,55 @@
                   </svg>
                 </div>
                 <div class="attire-text-wrap">
-                  <span class="attire-micro-label">ATTIRE</span>
+                  <div class="attire-header-row">
+                    <span class="attire-micro-label">ATTIRE</span>
+                    <div class="attire-palette" title="Suggested Color Shades">
+                      <span class="palette-dot" style="background: #800A1D;" title="Regal Crimson Saree"></span>
+                      <span class="palette-dot" style="background: #1B4332;" title="Bottle Green Sherwani"></span>
+                      <span class="palette-dot" style="background: #C5A059;" title="Zardozi Gold"></span>
+                    </div>
+                  </div>
                   <span class="attire-description">Regal Red Saree &amp; Dark Green Indo-Western</span>
                 </div>
               </div>
               <div class="attire-divider"></div>
               <div class="event-card-actions">
-                <button class="btn-card-add cal-btn" data-title="Chandigarh Grand Reception | Nabila & Abhishek" data-start="2026-10-18T18:00:00" data-end="2026-10-18T22:30:00" data-location="Community Centre, Sector 37 C, Chandigarh">
+                <button class="btn-card-itinerary" type="button" aria-expanded="false" title="Toggle Ceremony Itinerary">
+                  <i class="fa-solid fa-list-check"></i> SCHEDULE <i class="fa-solid fa-chevron-down it-chevron"></i>
+                </button>
+                <button class="btn-card-add cal-btn" data-title="Chandigarh Grand Reception | Nabila & Abhishek" data-start="2026-10-18T18:00:00" data-end="2026-10-18T22:30:00" data-location="Community Centre, Sector 37 C, Chandigarh" title="Add to Calendar">
                   <i class="fa-regular fa-calendar-plus"></i> ADD
                 </button>
-                <a href="https://share.google/kuKT6wvcRRdWBEgXV" target="_blank" rel="noopener noreferrer" class="btn-card-map">
-                  <i class="fa-solid fa-diamond-turn-right"></i> VIEW MAP
+                <a href="https://share.google/kuKT6wvcRRdWBEgXV" target="_blank" rel="noopener noreferrer" class="btn-card-map" title="Navigate on Google Maps">
+                  <i class="fa-solid fa-diamond-turn-right"></i> MAP
                 </a>
+              </div>
+            </div>
+
+            <!-- Expandable Ceremony Itinerary Drawer -->
+            <div class="event-itinerary-drawer">
+              <div class="itinerary-timeline">
+                <div class="itinerary-step">
+                  <div class="step-time-badge">06:00 PM</div>
+                  <div class="step-details">
+                    <strong class="step-title">Welcome &amp; Receiving Line</strong>
+                    <p class="step-desc">Greeting close family, relatives, and honored guests with festive welcome</p>
+                  </div>
+                </div>
+                <div class="itinerary-step">
+                  <div class="step-time-badge">07:30 PM</div>
+                  <div class="step-details">
+                    <strong class="step-title">Family Blessings &amp; Speeches</strong>
+                    <p class="step-desc">Sharing cherished memories, heartfelt blessings, and congratulatory words</p>
+                  </div>
+                </div>
+                <div class="itinerary-step">
+                  <div class="step-time-badge">08:30 PM</div>
+                  <div class="step-details">
+                    <strong class="step-title">Grand Gala Dinner</strong>
+                    <p class="step-desc">Lavish celebratory feast honoring the newly married couple</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
