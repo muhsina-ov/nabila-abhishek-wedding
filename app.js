@@ -155,7 +155,60 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
     });
+
+    // Ensure hero background stretches till the text ends + 20 pixels
+    syncHeroBackgroundHeight();
   }
+
+  /* ------------------------------------------------------------------------
+     HERO BACKGROUND EXACT STRETCH CONTROLLER
+     "stretch the background till the text ends + 20 pixels"
+     ------------------------------------------------------------------------ */
+  function syncHeroBackgroundHeight() {
+    const artboard = document.querySelector('#rec2487446043 .t396__artboard');
+    const bgElem = document.querySelector('#rec2487446043 [data-elem-id="1779527203760000001"]');
+    const textElem = document.querySelector('#rec2487446043 [data-elem-id="1780748008617000005"]');
+    if (!artboard || !bgElem || !textElem) return;
+
+    // Measure rendered bottom edge of the message text inside the artboard
+    const artboardRect = artboard.getBoundingClientRect();
+    const textRect = textElem.getBoundingClientRect();
+    const textBottom = textRect.bottom - artboardRect.top;
+
+    // Requirement: stretch background till text ends + 20 pixels
+    const targetBottom = Math.ceil(textBottom + 20);
+    const bgTop = 750;
+    const bgHeight = Math.max(120, targetBottom - bgTop);
+
+    bgElem.style.setProperty('top', bgTop + 'px', 'important');
+    bgElem.style.setProperty('height', bgHeight + 'px', 'important');
+
+    const bgImg = bgElem.querySelector('.tn-atom__img');
+    if (bgImg) {
+      bgImg.style.setProperty('height', '100%', 'important');
+      bgImg.style.setProperty('object-fit', 'fill', 'important');
+    }
+
+    // Set artboard height to match targetBottom so there is no dead blank space
+    artboard.style.setProperty('height', targetBottom + 'px', 'important');
+    artboard.style.setProperty('--initial-scale-height', targetBottom + 'px');
+
+    const carrier = artboard.querySelector('.t396__carrier');
+    if (carrier) carrier.style.setProperty('height', targetBottom + 'px', 'important');
+    const filter = artboard.querySelector('.t396__filter');
+    if (filter) filter.style.setProperty('height', targetBottom + 'px', 'important');
+  }
+
+  // Initial and responsive triggers for hero background height
+  syncHeroBackgroundHeight();
+  window.addEventListener('load', syncHeroBackgroundHeight);
+  window.addEventListener('resize', syncHeroBackgroundHeight);
+  window.addEventListener('orientationchange', syncHeroBackgroundHeight);
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(syncHeroBackgroundHeight);
+  }
+  setTimeout(syncHeroBackgroundHeight, 400);
+  setTimeout(syncHeroBackgroundHeight, 1200);
 
   // Trigger opening on tap or click (debounced against mobile ghost clicks)
   if (overlay) {
