@@ -338,6 +338,347 @@ button {
   100% { transform: scale(1.35); opacity: 0; }
 }
 
+/* Ensure Tilda Records & Wax Seal Royale Hero are always visible and crisp */
+.t-records {
+  opacity: 1 !important;
+  background-color: var(--bg-parchment) !important;
+}
+
+#hero.hero-section-wax-seal-royale {
+  position: relative;
+  background-color: var(--bg-parchment);
+  width: 100%;
+  overflow: hidden;
+}
+
+#rec2487446043 {
+  background-color: var(--bg-parchment) !important;
+}
+
+#rec2487446043 [data-elem-id="1782235970225000002"],
+#rec2487446043 [data-elem-id="1782235970224000001"] {
+  cursor: pointer;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+#rec2487446043 [data-elem-id="1782235970225000002"]:hover,
+#rec2487446043 [data-elem-id="1782235970224000001"]:hover {
+  transform: translateY(3px);
+  opacity: 0.85;
+}
+
+#countdown {
+  scroll-margin-top: 30px;
+}
+
+/* ==========================================================================
+   HERO VIDEO: FULL DEVICE WIDTH (EDGE-TO-EDGE STRETCH)
+   ========================================================================== */
+
+#rec2487446043 .t396__artboard {
+  overflow: hidden !important;
+}
+
+/* Video container stretches 100% edge-to-edge to the device sides with crystal clarity (no mask gradient) */
+#rec2487446043 .tn-elem[data-elem-id="1773841348614000001"] {
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  width: 100vw !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  z-index: 1 !important;
+  overflow: hidden !important;
+  zoom: 1 !important;
+  display: block !important;
+  height: 765px !important;
+  -webkit-mask-image: none !important;
+  mask-image: none !important;
+}
+
+#rec2487446043 .tn-elem[data-elem-id="1773841348614000001"] .tn-atom,
+#rec2487446043 .tn-elem[data-elem-id="1773841348614000001"] .tn-atom__html {
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  padding: 0 !important;
+}
+
+#rec2487446043 .tn-elem[data-elem-id="1773841348614000001"] video {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  display: block !important;
+}
+
+/* Milky/yellow radial gradient overlay completely removed as requested */
+#rec2487446043 .tn-elem[data-elem-id="1763402091707"] {
+  display: none !important;
+}
+
+/* Floral banner stretches edge-to-edge to the device ends ("to the end") */
+#rec2487446043 .tn-elem[data-elem-id="1779527203760000001"] {
+  position: absolute !important;
+  top: 750px !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  width: 100vw !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding: 0 !important;
+  z-index: 4 !important;
+  display: block !important;
+  pointer-events: none !important;
+  box-sizing: border-box !important;
+}
+
+#rec2487446043 .tn-elem[data-elem-id="1779527203760000001"] .tn-atom {
+  width: 100% !important;
+  display: block !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#rec2487446043 .tn-elem[data-elem-id="1779527203760000001"] .tn-atom__img {
+  width: 100% !important;
+  width: 100vw !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  object-fit: cover !important;
+  object-position: center bottom !important;
+  margin: 0 !important;
+}
+
+/* Floral bouquets pinned to device ends (left & right sides) */
+#rec2487446043 .tn-elem[data-elem-id="1780142978273000001"] {
+  position: absolute !important;
+  top: 566px !important;
+  left: 0 !important;
+  right: auto !important;
+  z-index: 4 !important;
+  pointer-events: none !important;
+}
+
+#rec2487446043 .tn-elem[data-elem-id="1780748451024000006"] {
+  position: absolute !important;
+  top: 547px !important;
+  right: 0 !important;
+  left: auto !important;
+  z-index: 4 !important;
+  pointer-events: none !important;
+}
+
+/* Scroll down & Chevron centered inside the video above the bottom floral frame */
+#rec2487446043 .tn-elem[data-elem-id="1782235970225000002"] {
+  position: absolute !important;
+  top: 518px !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  max-width: 320px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  z-index: 5 !important;
+}
+
+#rec2487446043 .tn-elem[data-elem-id="1782235970224000001"] {
+  position: absolute !important;
+  top: 558px !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 25px !important;
+  margin: 0 auto !important;
+  z-index: 5 !important;
+}
+
+/* Completely remove Islamic calligraphy element for Christian wedding */
+#rec2487446043 .tn-elem[data-elem-id="1782312134224"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Christian Holy Scripture: Song of Solomon 3:4 */
+#rec2487446043 .tn-elem[data-elem-id="1780748008617000003"] {
+  position: absolute !important;
+  top: 830px !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  max-width: 680px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  padding: 0 20px !important;
+  box-sizing: border-box !important;
+  z-index: 5 !important;
+  height: auto !important;
+  display: block !important;
+}
+
+#rec2487446043 .tn-elem[data-elem-id="1780748008617000003"] .tn-atom {
+  font-family: 'NewFonts', 'Great Vibes', 'ImperialScript', cursive, serif !important;
+  font-weight: 300 !important;
+  font-size: 38px !important;
+  line-height: 1.3 !important;
+  color: #a67d2b !important;
+  display: block !important;
+  text-align: center !important;
+  white-space: normal !important;
+  text-shadow: 0 1px 2px rgba(166, 125, 43, 0.18);
+  letter-spacing: 0.5px;
+}
+
+#rec2487446043 .tn-elem[data-elem-id="1780748008617000003"] .bible-verse-cite {
+  display: block !important;
+  margin-top: 12px !important;
+  font-family: 'Cinzel', 'Ovo', Georgia, serif !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: 2.5px !important;
+  text-transform: uppercase !important;
+  color: #8c6a28 !important;
+  opacity: 0.9 !important;
+  text-shadow: none !important;
+}
+
+/* Friends and Family message block */
+#rec2487446043 .tn-elem[data-elem-id="1780748008617000005"] {
+  position: absolute !important;
+  top: 960px !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  max-width: 480px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  padding: 0 20px !important;
+  box-sizing: border-box !important;
+  z-index: 5 !important;
+  height: auto !important;
+  display: block !important;
+}
+
+#rec2487446043 .tn-elem[data-elem-id="1780748008617000005"] .tn-atom {
+  display: block !important;
+  text-align: center !important;
+  white-space: normal !important;
+  font-family: 'Ovo', 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 21px !important;
+  line-height: 1.45 !important;
+  color: #6a5140 !important;
+}
+
+/* Ensure text and decorative elements sit gracefully above video */
+#rec2487446043 .tn-elem[data-elem-id="1763402147625"],
+#rec2487446043 .tn-elem[data-elem-id="176340398328864790"],
+#rec2487446043 .tn-elem[data-elem-id="176340401720454780"],
+#rec2487446043 .tn-elem[data-elem-id="176340390975774690"],
+#rec2487446043 .tn-elem[data-elem-id="1780142978273000001"],
+#rec2487446043 .tn-elem[data-elem-id="1780748451024000006"],
+#rec2487446043 .tn-elem[data-elem-id="1782235970224000001"],
+#rec2487446043 .tn-elem[data-elem-id="1782235970225000002"] {
+  z-index: 5 !important;
+}
+
+/* Responsive adjustments across breakpoints */
+@media screen and (max-width: 1199px) {
+  #rec2487446043 .tn-elem[data-elem-id="1773841348614000001"] {
+    height: 765px !important;
+  }
+  #rec2487446043 .tn-elem[data-elem-id="1780748008617000003"] {
+    top: 830px !important;
+  }
+  #rec2487446043 .tn-elem[data-elem-id="1780748008617000005"] {
+    top: 960px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #rec2487446043 .tn-elem[data-elem-id="1773841348614000001"] {
+    height: 765px !important;
+  }
+  #rec2487446043 .tn-elem[data-elem-id="1780142978273000001"] {
+    left: 0 !important;
+    right: auto !important;
+    top: 568px !important;
+    max-width: 44% !important;
+  }
+  #rec2487446043 .tn-elem[data-elem-id="1780748451024000006"] {
+    right: 0 !important;
+    left: auto !important;
+    top: 586px !important;
+    max-width: 44% !important;
+  }
+  #rec2487446043 .tn-elem[data-elem-id="1780748008617000003"] {
+    top: 825px !important;
+    max-width: 90% !important;
+  }
+  #rec2487446043 .tn-elem[data-elem-id="1780748008617000003"] .tn-atom {
+    font-size: 32px !important;
+    line-height: 1.25 !important;
+  }
+  #rec2487446043 .tn-elem[data-elem-id="1780748008617000003"] .bible-verse-cite {
+    font-size: 13px !important;
+    letter-spacing: 2px !important;
+  }
+  #rec2487446043 .tn-elem[data-elem-id="1780748008617000005"] {
+    top: 950px !important;
+    max-width: 90% !important;
+  }
+  #rec2487446043 .tn-elem[data-elem-id="1780748008617000005"] .tn-atom {
+    font-size: 19px !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #rec2487446043 .tn-elem[data-elem-id="1773841348614000001"] {
+    height: 765px !important;
+  }
+  #rec2487446043 .tn-elem[data-elem-id="1780142978273000001"] {
+    left: 0 !important;
+    right: auto !important;
+    top: 568px !important;
+    max-width: 42% !important;
+  }
+  #rec2487446043 .tn-elem[data-elem-id="1780748451024000006"] {
+    right: 0 !important;
+    left: auto !important;
+    top: 586px !important;
+    max-width: 42% !important;
+  }
+  #rec2487446043 .tn-elem[data-elem-id="1780748008617000003"] {
+    top: 820px !important;
+    max-width: 92% !important;
+  }
+  #rec2487446043 .tn-elem[data-elem-id="1780748008617000003"] .tn-atom {
+    font-size: 28px !important;
+    line-height: 1.25 !important;
+  }
+  #rec2487446043 .tn-elem[data-elem-id="1780748008617000003"] .bible-verse-cite {
+    font-size: 12px !important;
+    letter-spacing: 1.5px !important;
+  }
+  #rec2487446043 .tn-elem[data-elem-id="1780748008617000005"] {
+    top: 940px !important;
+    max-width: 92% !important;
+  }
+  #rec2487446043 .tn-elem[data-elem-id="1780748008617000005"] .tn-atom {
+    font-size: 17px !important;
+    line-height: 1.4 !important;
+  }
+}
+
 /* ==========================================================================
    2. HERO SECTION: WAX SEAL ROYALE ARTBOARD (Swans & Floral Architecture)
    ========================================================================== */
@@ -568,6 +909,35 @@ button {
   padding: 0 8px 1px;
   border-bottom: 1px solid rgba(197, 155, 39, 0.45);
   text-shadow: 0 1px 2px rgba(255, 255, 255, 0.9);
+}
+
+/* Top Scripture Verse */
+.hero-top-scripture {
+  margin: 3px auto 4px auto;
+  max-width: 280px;
+  text-align: center;
+  padding: 0 4px;
+}
+
+.top-scripture-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(10.5px, 1.5vh, 12px);
+  color: var(--text-dark);
+  line-height: 1.3;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.95);
+}
+
+.top-scripture-ref {
+  display: inline-block;
+  font-family: var(--font-royal);
+  font-size: clamp(8px, 1.1vh, 9.5px);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-accent);
+  font-weight: 700;
+  margin-top: 1px;
 }
 
 /* Typography on Top of Video */
@@ -1434,9 +1804,9 @@ button {
 }
 
 .container-story {
-  max-width: 540px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 20px;
   position: relative;
   z-index: 2;
 }
@@ -1444,7 +1814,7 @@ button {
 /* Rajwada Story Section Header */
 .story-header-rajwada {
   text-align: center;
-  margin-bottom: 46px;
+  margin-bottom: 36px;
 }
 
 .story-pretitle-rajwada {
@@ -1468,58 +1838,534 @@ button {
   margin: 0;
 }
 
-/* Timeline Container */
-.rajwada-timeline {
+.story-subtitle-rajwada {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 17px;
+  color: #8C7355;
+  margin: 8px 0 0 0;
+  letter-spacing: 0.02em;
+}
+
+/* Royal Interactive Chapter Stepper Bar */
+.story-stepper-wrap {
   position: relative;
-  padding: 10px 0 30px 0;
+  max-width: 440px;
+  margin: 0 auto 36px auto;
+  padding: 0 10px;
 }
 
-/* Delicate Vertical Track Line */
-.rajwada-timeline-line {
-  position: absolute;
-  left: 23px;
-  top: 24px;
-  bottom: 50px;
-  width: 1px;
-  background: #DECBB0;
-  z-index: 1;
-}
-
-/* Timeline Item (Step) */
-.rajwada-timeline-item {
+.story-stepper-nodes {
+  display: flex;
+  justify-content: space-between;
   position: relative;
-  padding-left: 68px;
-  margin-bottom: 52px;
+  z-index: 2;
 }
 
-.rajwada-timeline-item:last-child {
-  margin-bottom: 0;
+.story-step-node {
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.25s ease;
 }
 
-/* Circular Year / Milestone Node on the Track Line */
-.rajwada-year-node {
+.story-step-node .step-badge {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #FAF5EA;
+  border: 1.5px solid #DECBB0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #A6833D;
+  font-size: 14px;
+  box-shadow: 0 4px 12px rgba(180, 140, 61, 0.12);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.story-step-node .step-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9E856F;
+  transition: color 0.3s ease;
+}
+
+.story-step-node:hover .step-badge {
+  transform: scale(1.08);
+  border-color: #C09F67;
+}
+
+.story-step-node.active .step-badge {
+  background: var(--burgundy-royal);
+  border-color: #D4AF37;
+  color: #FFFFFF;
+  transform: scale(1.15);
+  box-shadow: 0 6px 20px rgba(142, 27, 46, 0.35);
+}
+
+.story-step-node.active .step-label {
+  color: var(--burgundy-royal);
+  font-weight: 700;
+}
+
+.story-step-node.passed .step-badge {
+  background: #F4E8D4;
+  border-color: #B3915C;
+  color: #8E1B2E;
+}
+
+/* ==========================================================================
+   VERTICAL TIMELINE WITH INTERACTIVE LINE & SHINING LIGHT BEACON
+   ========================================================================== */
+.story-timeline-container {
+  position: relative;
+  margin-top: 40px;
+  padding-bottom: 24px;
+}
+
+/* Central Interactive Royal Spine */
+.story-scroll-spine {
   position: absolute;
+  top: 10px;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Base Track */
+.story-scroll-track {
+  position: absolute;
+  top: 0;
   left: 0;
-  top: 28px;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(212, 175, 55, 0.28) 0%, rgba(212, 175, 55, 0.14) 100%);
+  border-radius: 4px;
+}
+
+/* Interactive Gold Fill Line that grows downward with scroll */
+.story-scroll-line-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0%;
+  background: linear-gradient(to bottom, #8E1B2E 0%, #C09F67 35%, #F6E27A 75%, #FFFFFF 100%);
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.85), 0 0 20px rgba(246, 226, 122, 0.65);
+  border-radius: 4px;
+  will-change: height;
+}
+
+/* The Radiant Shining Light Beacon traveling down with scroll */
+.story-shining-light {
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 36px;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  will-change: top, opacity;
+}
+
+/* Core Brilliant Light */
+.shining-light-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #FFFFFF 28%, #FFF5BD 65%, #E5A429 100%);
+  box-shadow: 0 0 16px 5px rgba(255, 235, 120, 0.95), 0 0 32px 10px rgba(212, 175, 55, 0.8), 0 0 55px 18px rgba(255, 200, 50, 0.45);
+  animation: lightCorePulse 1.6s ease-in-out infinite alternate;
+}
+
+/* Radial Golden Flare */
+.shining-light-flare {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 245, 190, 0.65) 0%, rgba(212, 175, 55, 0.3) 45%, transparent 70%);
+  animation: lightFlareRotate 5s linear infinite;
+}
+
+/* Rotating Stardust Spark */
+.shining-light-spark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFFFFF;
+  font-size: 13px;
+  line-height: 1;
+  text-shadow: 0 0 8px #FFD700, 0 0 16px #FFF4B8;
+  animation: sparkSpin 3.2s linear infinite;
+  pointer-events: none;
+}
+
+/* Trailing Golden Comet Tail */
+.shining-light-tail {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 48px;
+  background: linear-gradient(to top, rgba(255, 240, 160, 0.95), rgba(212, 175, 55, 0.45) 55%, transparent 100%);
+  filter: blur(0.5px);
+}
+
+/* Ambient Pulsing Halo */
+.shining-light-halo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 220, 100, 0.28) 0%, transparent 70%);
+  animation: haloPulse 2.4s ease-in-out infinite alternate;
+}
+
+@keyframes lightCorePulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.85);
+    box-shadow: 0 0 12px 3px rgba(255, 235, 120, 0.9), 0 0 24px 7px rgba(212, 175, 55, 0.7);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.15);
+    box-shadow: 0 0 22px 6px rgba(255, 245, 140, 1), 0 0 42px 13px rgba(212, 175, 55, 0.92), 0 0 65px 22px rgba(255, 205, 50, 0.5);
+  }
+}
+
+@keyframes lightFlareRotate {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes sparkSpin {
+  0% { transform: translate(-50%, -50%) rotate(0deg) scale(0.85); }
+  50% { transform: translate(-50%, -50%) rotate(180deg) scale(1.28); }
+  100% { transform: translate(-50%, -50%) rotate(360deg) scale(0.85); }
+}
+
+@keyframes haloPulse {
+  0% { transform: translate(-50%, -50%) scale(0.8); opacity: 0.35; }
+  100% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.85; }
+}
+
+@keyframes nodeRippleRing {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+    border-color: #F6E27A;
+  }
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+    border-color: rgba(212, 175, 55, 0);
+  }
+}
+
+/* Timeline Items (Chapters 1 to 4) */
+.story-timeline-items {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.story-timeline-item {
+  position: relative;
+  width: 100%;
+  scroll-margin-top: 100px;
+}
+
+/* Desktop Alternating Rhythm (min-width: 768px) */
+@media (min-width: 768px) {
+  .story-timeline-item:nth-child(odd) .rajwada-card {
+    margin-left: 0;
+    margin-right: auto;
+    width: calc(50% - 46px);
+  }
+
+  .story-timeline-item:nth-child(even) .rajwada-card {
+    margin-left: auto;
+    margin-right: 0;
+    width: calc(50% - 46px);
+  }
+
+  /* Horizontal Golden Connecting Branch to Center Spine */
+  .story-timeline-item:nth-child(odd)::after {
+    content: '';
+    position: absolute;
+    top: 38px;
+    right: calc(50% - 46px);
+    width: 46px;
+    height: 2px;
+    border-top: 1.5px dashed rgba(212, 175, 55, 0.45);
+    pointer-events: none;
+  }
+
+  .story-timeline-item:nth-child(even)::after {
+    content: '';
+    position: absolute;
+    top: 38px;
+    left: calc(50% - 46px);
+    width: 46px;
+    height: 2px;
+    border-top: 1.5px dashed rgba(212, 175, 55, 0.45);
+    pointer-events: none;
+  }
+
+  /* Node pinned on the central spine */
+  .story-timeline-node {
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile & Small Screens (< 768px): Left-spine layout */
+@media (max-width: 767px) {
+  .container-story {
+    padding: 0 16px;
+  }
+
+  .story-scroll-spine {
+    left: 22px;
+    transform: none;
+  }
+
+  .story-timeline-node {
+    position: absolute;
+    top: 18px;
+    left: 22px;
+    transform: translateX(-50%);
+  }
+
+  .story-timeline-item .rajwada-card {
+    margin-left: 50px;
+    width: calc(100% - 50px);
+  }
+
+  .story-timeline-items {
+    gap: 44px;
+  }
+}
+
+/* Milestone Node attached to line */
+.story-timeline-node {
   width: 46px;
   height: 46px;
   border-radius: 50%;
   background: #FAF5EA;
-  border: 1px solid #D6BE9A;
+  border: 2px solid #DECBB0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #A6833D;
+  z-index: 4;
+  box-shadow: 0 4px 14px rgba(180, 140, 61, 0.15);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.story-timeline-node .node-icon-wrap {
+  font-size: 13px;
+  line-height: 1;
+}
+
+.story-timeline-node .node-ch-badge {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-top: 1px;
+}
+
+.story-timeline-node .node-pulse-ring {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 50%;
+  border: 1.5px solid #F6E27A;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Illuminated state when shining light reaches node */
+.story-timeline-item.reached .story-timeline-node {
+  background: var(--burgundy-royal);
+  border-color: #F6E27A;
+  color: #FFFFFF;
+  box-shadow: 0 0 24px rgba(212, 175, 55, 0.7), 0 4px 16px rgba(142, 27, 46, 0.35);
+}
+
+.story-timeline-item.reached .node-pulse-ring {
+  animation: nodeRippleRing 2.2s cubic-bezier(0.1, 0.8, 0.3, 1) infinite;
+}
+
+.story-timeline-item.reached .rajwada-card {
+  border-color: rgba(212, 175, 55, 0.7);
+  box-shadow: 0 16px 42px rgba(142, 27, 46, 0.12), 0 0 24px rgba(212, 175, 55, 0.2);
+}
+
+/* Expand Badge over Image */
+.story-expand-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(36, 12, 18, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(212, 175, 55, 0.55);
+  color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 2;
-  box-shadow: 0 2px 10px rgba(180, 140, 61, 0.08);
-  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  z-index: 3;
 }
 
-.rajwada-year-node span {
-  font-family: 'Cinzel', serif;
+.story-expand-badge:hover {
+  background: var(--burgundy-royal);
+  transform: scale(1.1);
+  border-color: #F5D796;
+}
+
+/* Card Slide Footer */
+.story-slide-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 22px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(214, 190, 154, 0.5);
+  flex-wrap: wrap;
+}
+
+.story-counter-label {
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 11px;
-  font-weight: 500;
-  color: #B3915C;
-  letter-spacing: 0.05em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #A6833D;
+}
+
+/* In-Card Scroll Next Button */
+.story-scroll-next-btn {
+  background: rgba(244, 235, 220, 0.75);
+  border: 1px solid rgba(192, 159, 103, 0.5);
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #782131;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.story-scroll-next-btn:hover {
+  background: var(--burgundy-royal);
+  color: #FFFFFF;
+  border-color: var(--burgundy-royal);
+  transform: translateY(2px);
+  box-shadow: 0 4px 14px rgba(142, 27, 46, 0.25);
+}
+
+.story-celebrate-link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-royal);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #8E1B2E 0%, #B32D42 50%, #C09F67 100%);
+  color: #FFFFFF;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(142, 27, 46, 0.3);
+  transition: all 0.25s ease;
+}
+
+.story-celebrate-link-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(142, 27, 46, 0.45);
+}
+
+/* Terminal Seal at End of Timeline */
+.story-timeline-terminal {
+  text-align: center;
+  margin-top: 48px;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.terminal-seal {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8E1B2E, #B32D42, #C09F67);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 8px 24px rgba(142, 27, 46, 0.35), 0 0 18px rgba(212, 175, 55, 0.45);
+  border: 2px solid #F6E27A;
+}
+
+.terminal-caption {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 17px;
+  color: #8C7355;
+  letter-spacing: 0.04em;
 }
 
 /* The Ivory Story Card */
@@ -1532,25 +2378,13 @@ button {
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
 }
 
-.rajwada-timeline-item:hover .rajwada-card {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 45px rgba(106, 81, 64, 0.12);
-  border-color: #D4B982;
-}
-
-.rajwada-timeline-item:hover .rajwada-year-node {
-  transform: scale(1.08);
-  border-color: var(--burgundy-royal);
-  box-shadow: 0 6px 18px rgba(90, 15, 27, 0.2);
-}
-
-/* Card Top Image Container */
 .rajwada-card-media {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 11;
   overflow: hidden;
   background: #EFE4D2;
+  cursor: pointer;
 }
 
 .rajwada-card-img {
@@ -1572,6 +2406,28 @@ button {
   text-align: left;
 }
 
+.story-chapter-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--burgundy-royal);
+  background: rgba(142, 27, 46, 0.07);
+  border: 1px solid rgba(142, 27, 46, 0.18);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.story-chapter-pill i {
+  font-size: 10px;
+  color: #B3915C;
+}
+
 .rajwada-card-title {
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 28px;
@@ -1589,17 +2445,36 @@ button {
   font-weight: 400;
   color: #A6833D;
   letter-spacing: 0.02em;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   display: block;
 }
 
 .rajwada-card-desc {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 17px;
+  font-size: 17.5px;
   font-weight: 400;
   line-height: 1.7;
   color: #6C5A4F;
   margin: 0;
+}
+
+.rajwada-card-desc p {
+  margin: 0 0 10px 0;
+}
+
+.rajwada-card-desc p:last-child {
+  margin-bottom: 0;
+}
+
+.rajwada-card-desc .story-highlight-quote {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed rgba(214, 190, 154, 0.65);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--burgundy-royal);
+  line-height: 1.6;
 }
 
 /* ==========================================================================
@@ -1867,72 +2742,23 @@ button {
   margin-top: 3px;
 }
 
-/* Bottom Bar: Attire + Action Buttons */
+/* Bottom Bar: Action Buttons */
 .event-card-bottom-bar {
   background: #FFFFFF;
-  padding: 18px 22px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  border-top: 1px solid rgba(212, 175, 55, 0.2);
-}
-
-.event-attire-group {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex: 1;
-  min-width: 0;
-}
-
-.attire-icon-wrap {
-  flex-shrink: 0;
+  padding: 18px 24px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.attire-text-wrap {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
-
-.attire-micro-label {
-  font-family: var(--font-royal);
-  font-size: 10px;
-  letter-spacing: 0.2em;
-  font-weight: 700;
-  color: #8A2434;
-  text-transform: uppercase;
-  margin-bottom: 2px;
-}
-
-.attire-description {
-  font-size: 12.5px;
-  color: #2D1A1E;
-  font-weight: 500;
-  line-height: 1.35;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-}
-
-.attire-divider {
-  width: 1px;
-  height: 38px;
-  background: rgba(212, 175, 55, 0.35);
-  flex-shrink: 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .event-card-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .btn-card-add {

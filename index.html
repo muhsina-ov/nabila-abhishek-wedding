@@ -34,6 +34,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+  <!-- Template Wax Seal Royale Assets & Stylesheets -->
+  <link rel="stylesheet" href="css/tilda-grid-3.0.min.css" type="text/css" media="all" onerror="this.loaderr='y';"/>
+  <link rel="stylesheet" href="css/tilda-blocks-page155232023.min.css?t=1784620107" type="text/css" media="all" onerror="this.loaderr='y';" />
+  <link rel="stylesheet" href="css/tilda-animation-2.0.min.css" type="text/css" media="all" onerror="this.loaderr='y';" />
+  <link rel="stylesheet" type="text/css" href="css/fonts.css">
+  <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+  <!-- Tilda Zero Block Helpers & Runtime Scripts -->
+  <script type="text/javascript">
+    function t_onReady(func) {if(document.readyState!='loading') {func();} else {document.addEventListener('DOMContentLoaded',func);}}
+    function t_onFuncLoad(funcName,okFunc,time) {if(typeof window[funcName]==='function') {okFunc();} else {setTimeout(function() {t_onFuncLoad(funcName,okFunc,time);},(time||100));}}
+    function t396_initialScale(t){var e=document.getElementById("rec"+t);if(e){var i=e.querySelector(".t396__artboard");if(i){window.tn_scale_initial_window_width||(window.tn_scale_initial_window_width=document.documentElement.clientWidth);var a=window.tn_scale_initial_window_width,r=[],n,l=i.getAttribute("data-artboard-screens");if(l){l=l.split(",");for(var o=0;o<l.length;o++)r[o]=parseInt(l[o],10)}else r=[320,480,640,960,1200];for(var o=0;o<r.length;o++){var d=r[o];a>=d&&(n=d)}var _="edit"===(window.allrecords&&window.allrecords.getAttribute("data-tilda-mode")),c="center"===t396_getFieldValue(i,"valign",n,r),s="grid"===t396_getFieldValue(i,"upscale",n,r),w=t396_getFieldValue(i,"height_vh",n,r),g=t396_getFieldValue(i,"height",n,r),u=!!window.opr&&!!window.opr.addons||!!window.opera||-1!==navigator.userAgent.indexOf(" OPR/");if(!_&&c&&!s&&!w&&g&&!u){var h=parseFloat((a/n).toFixed(3)),f=[i,i.querySelector(".t396__carrier"),i.querySelector(".t396__filter")],v=Math.floor(parseInt(g,10)*h)+"px",p;i.style.setProperty("--initial-scale-height",v);for(var o=0;o<f.length;o++)if(f[o])f[o].style.setProperty("height","var(--initial-scale-height)");t396_scaleInitial__getElementsToScale(i).forEach((function(t){t.style.zoom=h}))}}}}
+    function t396_scaleInitial__getElementsToScale(t){return t?Array.prototype.slice.call(t.children).filter((function(t){return t&&(t.classList.contains("t396__elem")||t.classList.contains("t396__group"))})):[]}
+    function t396_getFieldValue(t,e,i,a){var r,n=a[a.length-1];if(!(r=i===n?t.getAttribute("data-artboard-"+e):t.getAttribute("data-artboard-"+e+"-res-"+i)))for(var l=0;l<a.length;l++){var o=a[l];if(!(o<=i)&&(r=o===n?t.getAttribute("data-artboard-"+e):t.getAttribute("data-artboard-"+e+"-res-"+o)))break}return r}
+    window.TN_SCALE_INITIAL_VER="1.0",window.tn_scale_initial_window_width=null;
+  </script>
+  <script src="js/tilda-scripts-3.0.min.js" charset="utf-8" defer onerror="this.loaderr='y';"></script>
+  <script src="js/tilda-blocks-page155232023.min.js?t=1784620107" charset="utf-8" async onerror="this.loaderr='y';"></script>
+  <script src="js/tilda-lazyload-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
+  <script src="js/tilda-animation-2.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
+  <script src="js/tilda-zero-1.1.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
+  <script src="js/tilda-animation-sbs-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
+  <script src="js/tilda-zero-scale-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
+  <script src="js/tilda-events-1.0.min.js" charset="utf-8" async onerror="this.loaderr='y';"></script>
+
   <!-- Main Wax Seal Royale Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
@@ -87,98 +112,12 @@
   <!-- ================= MAIN INVITATION SITE ================= -->
   <main id="main-content">
 
-    <!-- ================= HERO ARTBOARD (Wax Seal Royale Swans & Floral Sanctuary) ================= -->
-    <header class="hero-artboard-wrap" id="hero">
-      
-      <!-- Ambient Wide-Screen Botanical Sprays (Background) -->
-      <img src="images/cdn/noroot_3.png" alt="" class="hero-floating-floral hero-floral-left" aria-hidden="true">
-      <img src="images/cdn/noroot_2.png" alt="" class="hero-floating-floral hero-floral-right" aria-hidden="true">
-
-      <!-- Hero Card Architectural Stage (Anchors arch and floral canopy together) -->
-      <div class="hero-card-stage">
-
-        <!-- Multi-Layered Royal Botanical Canopy Hugging the Arch -->
-        <div class="hero-floral-canopy" aria-hidden="true">
-          <!-- Top Apex Arch Floral Crown -->
-          <img src="images/cdn/floral_arch_crown.png" alt="" class="hero-floral-crown">
-          <!-- Left Cascading Floral Vine -->
-          <img src="images/cdn/floral_arch_vine_left.png" alt="" class="hero-floral-side-vine hero-vine-left">
-          <!-- Right Cascading Floral Vine -->
-          <img src="images/cdn/floral_arch_vine_right.png" alt="" class="hero-floral-side-vine hero-vine-right">
-          <!-- Bottom Corner Bouquets -->
-          <img src="images/cdn/floral_arch_bottom_left.png" alt="" class="hero-floral-bot hero-bot-left">
-          <img src="images/cdn/floral_arch_bottom_right.png" alt="" class="hero-floral-bot hero-bot-right">
-        </div>
-
-        <!-- The Grand Gilded Arched Card with Double Gold Borders & Inner Glow -->
-        <div class="hero-arched-artboard">
-          <!-- Inner Gilded Arch Border Ring -->
-          <div class="hero-arch-inner-border"></div>
-
-          <!-- Background Swans & Falling Petals Video -->
-          <video class="hero-arched-video" autoplay muted loop playsinline webkit-playsinline x5-playsinline preload="auto">
-            <source src="media/Swans2.mov" type="video/mp4">
-            <source src="media/Swans2.mov" type="video/quicktime">
-            Your browser does not support the video tag.
-          </video>
-
-          <!-- Subtle Dreamy Golden Scrim for Text Readability -->
-          <div class="hero-arched-overlay"></div>
-
-          <!-- Content Positioned Directly on Top of the Video -->
-          <div class="hero-video-overlay-content">
-            
-            <!-- Regal Royal Monogram Crest -->
-            <div class="hero-royal-crest">
-              <div class="hero-crest-crown"><i class="fa-solid fa-crown"></i></div>
-              <div class="hero-crest-monogram">N &bull; A</div>
-            </div>
-
-            <p class="hero-subtitle-day">The Royal Wedding of</p>
-
-            <h1 class="hero-names-title">
-              <span class="hero-name-part">Nabila</span>
-              <span class="hero-names-amp">&amp;</span>
-              <span class="hero-name-part">Abhishek</span>
-            </h1>
-
-            <!-- Royal Center Flourish Ornament -->
-            <img src="images/cdn/acomm-decor.png" alt="Royal Divider" class="hero-center-flourish">
-
-            <!-- Interactive Scratch-to-Reveal Date Medallion -->
-            <div class="scratch-date-wrapper">
-              <div class="scratch-date-container" id="scratch-date-container" title="Scratch to reveal wedding date">
-                <div class="scratch-date-revealed">
-                  <span class="scratch-date-text">17 • OCTOBER • 2026</span>
-                  <span class="scratch-date-sub">Saturday • 11:00 AM • Chandigarh</span>
-                </div>
-                <canvas id="scratch-canvas" class="scratch-canvas" width="250" height="60"></canvas>
-              </div>
-              <div class="scratch-hint" id="scratch-hint">
-                <span class="scratch-hint-pill">
-                  <i class="fa-solid fa-wand-magic-sparkles"></i> Touch &amp; scratch to reveal
-                </span>
-              </div>
-            </div>
-
-            <!-- Sacred Blessing & Scripture Box -->
-            <div class="hero-verse-box">
-              <p class="hero-verse-main">Two Souls • One Destiny<br>A Lifetime Written in Love</p>
-              <p class="hero-scripture-quote">“A cord of three strands is not easily broken.”</p>
-              <p class="hero-scripture-ref">Ecclesiastes 4:12</p>
-            </div>
-
-            <p class="hero-welcome-text">
-              Dear Friends and Family, join us for an unforgettable celebration of love, devotion, and laughter as we unite our lives before God and our cherished loved ones.
-            </p>
-
-            <!-- Animated Scroll Prompt -->
-            <a href="#countdown" class="hero-scroll-prompt">
-              <span class="hero-scroll-text">Scroll down</span>
-              <div class="hero-scroll-chevron"></div>
-            </a>
-          </div>
-        </div>
+    <!-- ================= HERO ARTBOARD (Wax Seal Royale Template Exact Architecture) ================= -->
+    <header id="hero" class="hero-section-wax-seal-royale">
+      <div id="allrecords" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="11836131" data-tilda-page-id="155232023" data-tilda-page-alias="thesacredgarden" data-tilda-formskey="b9e82ac5385c1bce198c7c2711836131" data-tilda-cookie="no" data-tilda-lazy="yes" data-tilda-root-zone="one" data-tilda-project-country="NL">
+        <div id="rec2487446043" class="r t-rec" style=" " data-animationappear="off" data-record-type="396"> <!-- T396 --> <style>#rec2487446043 .t396__artboard {height:1240px;background-color:#f9f0e0;}#rec2487446043 .t396__filter {height:1240px;}#rec2487446043 .t396__carrier{height:1240px;background-position:center center;background-attachment:scroll;background-size:cover;background-repeat:no-repeat;}@media screen and (max-width:1199px) {#rec2487446043 .t396__artboard,#rec2487446043 .t396__filter,#rec2487446043 .t396__carrier {}#rec2487446043 .t396__filter {}#rec2487446043 .t396__carrier {background-attachment:scroll;}}@media screen and (max-width:959px) {#rec2487446043 .t396__artboard,#rec2487446043 .t396__filter,#rec2487446043 .t396__carrier {}#rec2487446043 .t396__filter {}#rec2487446043 .t396__carrier {background-attachment:scroll;}}@media screen and (max-width:639px) {#rec2487446043 .t396__artboard,#rec2487446043 .t396__filter,#rec2487446043 .t396__carrier {}#rec2487446043 .t396__filter {}#rec2487446043 .t396__carrier {background-attachment:scroll;}}@media screen and (max-width:479px) {#rec2487446043 .t396__artboard,#rec2487446043 .t396__filter,#rec2487446043 .t396__carrier {height:1240px;}#rec2487446043 .t396__filter {}#rec2487446043 .t396__carrier {background-attachment:scroll;}}#rec2487446043 .tn-elem[data-elem-id="1773841348614000001"]{z-index:3;top:0px;;left:calc(50% - 600px + 375px);;width:450px;height:762px;}#rec2487446043 .tn-elem[data-elem-id="1773841348614000001"] .tn-atom{background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;}@media screen and (max-width:1199px){#rec2487446043 .tn-elem[data-elem-id="1773841348614000001"]{display:table;top:0px;;left:calc(50% - 480px + 255px);;width:450px;height:491px;}}@media screen and (max-width:959px){#rec2487446043 .tn-elem[data-elem-id="1773841348614000001"]{display:table;top:0px;;left:calc(50% - 320px + 95px);;width:450px;}}@media screen and (max-width:639px){#rec2487446043 .tn-elem[data-elem-id="1773841348614000001"]{display:table;left:calc(50% - 240px + 15px);;width:450px;}}@media screen and (max-width:479px){#rec2487446043 .tn-elem[data-elem-id="1773841348614000001"]{display:table;left:calc(50% - 160px + -65px);;width:450px;height:492px;}}#rec2487446043 .tn-elem[data-elem-id="1763402091707"]{z-index:3;top:0px;;left:calc(50% - 600px + 375px);;width:450px;height:676px;}#rec2487446043 .tn-elem[data-elem-id="1763402091707"] .tn-atom{border-radius:0px 0px 0px 0px;opacity:0.5;background-image:radial-gradient(circle at center,rgba(255,249,235,1) 0%,rgba(255,231,192,0) 85%);border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;}@media screen and (max-width:1199px){#rec2487446043 .tn-elem[data-elem-id="1763402091707"]{display:table;left:calc(50% - 480px + 255px);;}}@media screen and (max-width:959px){#rec2487446043 .tn-elem[data-elem-id="1763402091707"]{display:table;left:calc(50% - 320px + 95px);;}}@media screen and (max-width:639px){#rec2487446043 .tn-elem[data-elem-id="1763402091707"]{display:table;left:calc(50% - 240px + 15px);;}}@media screen and (max-width:479px){#rec2487446043 .tn-elem[data-elem-id="1763402091707"]{display:table;left:calc(50% - 160px + -65px);;}}#rec2487446043 .tn-elem[data-elem-id="1779527203760000001"]{display:block;z-index:3;top:753px;;left:calc(50% - 600px + 228px);;width:744px;height:487px;}#rec2487446043 .tn-elem[data-elem-id="1779527203760000001"] .tn-atom{display:block;height:100%;box-sizing:border-box;border-radius:0px 0px 0px 0px;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;}#rec2487446043 .tn-elem[data-elem-id="1779527203760000001"] .tn-atom__img{border-radius:0px 0px 0px 0px;object-fit:fill;height:100%;object-position:center center;}@media screen and (max-width:1199px){#rec2487446043 .tn-elem[data-elem-id="1779527203760000001"]{display:block;top:758px;;left:calc(50% - 480px + 108px);;height:479px;}}@media screen and (max-width:959px){#rec2487446043 .tn-elem[data-elem-id="1779527203760000001"]{display:block;top:763px;;left:calc(50% - 320px + -52px);;height:477px;}}@media screen and (max-width:639px){#rec2487446043 .tn-elem[data-elem-id="1779527203760000001"]{display:block;top:763px;;left:calc(50% - 240px + -132px);;height:470px;}}@media screen and (max-width:479px){#rec2487446043 .tn-elem[data-elem-id="1779527203760000001"]{display:block;top:763px;;left:calc(50% - 160px + -212px);;height:477px;}}#rec2487446043 .tn-elem[data-elem-id="1763402147625"]{color:#a67d2b;text-align:center;z-index:3;top:294px;;left:calc(50% - 600px + 320px);;width:560px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="1763402147625"] .tn-atom{vertical-align:middle;color:#a67d2b;font-size:80px;font-family:var(--t-text-font,Arial);line-height:0.7;font-weight:800;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));}@media screen and (max-width:1199px){#rec2487446043 .tn-elem[data-elem-id="1763402147625"]{display:table;left:calc(50% - 480px + 200px);;width:px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="1763402147625"] .tn-atom{white-space:normal;background-size:cover;}}@media screen and (max-width:959px){#rec2487446043 .tn-elem[data-elem-id="1763402147625"]{display:table;left:calc(50% - 320px + 40px);;width:px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="1763402147625"] .tn-atom{white-space:normal;background-size:cover;}}@media screen and (max-width:639px){#rec2487446043 .tn-elem[data-elem-id="1763402147625"]{display:table;left:calc(50% - 240px + -40px);;width:px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="1763402147625"] .tn-atom{white-space:normal;background-size:cover;}}@media screen and (max-width:479px){#rec2487446043 .tn-elem[data-elem-id="1763402147625"]{display:table;left:calc(50% - 160px + -120px);;width:px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="1763402147625"] .tn-atom{white-space:normal;background-size:cover;}}#rec2487446043 .tn-elem[data-elem-id="176340398328864790"]{color:#a67d2b;text-align:center;z-index:3;top:154px;;left:calc(50% - 600px + 320px);;width:560px;height:37px;}#rec2487446043 .tn-elem[data-elem-id="176340398328864790"] .tn-atom{vertical-align:middle;color:#a67d2b;font-size:40px;font-family:'NewFonts',Arial,sans-serif;line-height:0.5;font-weight:300;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));}@media screen and (max-width:1199px){#rec2487446043 .tn-elem[data-elem-id="176340398328864790"]{display:table;left:calc(50% - 480px + 200px);;width:px;}#rec2487446043 .tn-elem[data-elem-id="176340398328864790"] .tn-atom{white-space:normal;background-size:cover;}}@media screen and (max-width:959px){#rec2487446043 .tn-elem[data-elem-id="176340398328864790"]{display:table;left:calc(50% - 320px + 40px);;width:px;}#rec2487446043 .tn-elem[data-elem-id="176340398328864790"] .tn-atom{white-space:normal;background-size:cover;}}@media screen and (max-width:639px){#rec2487446043 .tn-elem[data-elem-id="176340398328864790"]{display:table;left:calc(50% - 240px + -40px);;width:px;}#rec2487446043 .tn-elem[data-elem-id="176340398328864790"] .tn-atom{white-space:normal;background-size:cover;}}@media screen and (max-width:479px){#rec2487446043 .tn-elem[data-elem-id="176340398328864790"]{display:table;left:calc(50% - 160px + -120px);;width:px;}#rec2487446043 .tn-elem[data-elem-id="176340398328864790"] .tn-atom{white-space:normal;background-size:cover;}}#rec2487446043 .tn-elem[data-elem-id="176340401720454780"]{color:#a67d2b;text-align:center;z-index:3;top:196px;;left:calc(50% - 600px + 320px);;width:560px;height:37px;}#rec2487446043 .tn-elem[data-elem-id="176340401720454780"] .tn-atom{vertical-align:middle;color:#a67d2b;font-size:25px;font-family:'NewFonts',Arial,sans-serif;line-height:0.5;font-weight:600;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));}@media screen and (max-width:1199px){#rec2487446043 .tn-elem[data-elem-id="176340401720454780"]{display:table;left:calc(50% - 480px + 200px);;width:px;}#rec2487446043 .tn-elem[data-elem-id="176340401720454780"] .tn-atom{white-space:normal;background-size:cover;}}@media screen and (max-width:959px){#rec2487446043 .tn-elem[data-elem-id="176340401720454780"]{display:table;left:calc(50% - 320px + 40px);;width:px;}#rec2487446043 .tn-elem[data-elem-id="176340401720454780"] .tn-atom{white-space:normal;background-size:cover;}}@media screen and (max-width:639px){#rec2487446043 .tn-elem[data-elem-id="176340401720454780"]{display:table;left:calc(50% - 240px + -40px);;width:px;}#rec2487446043 .tn-elem[data-elem-id="176340401720454780"] .tn-atom{white-space:normal;background-size:cover;}}@media screen and (max-width:479px){#rec2487446043 .tn-elem[data-elem-id="176340401720454780"]{display:table;left:calc(50% - 160px + -120px);;width:px;}#rec2487446043 .tn-elem[data-elem-id="176340401720454780"] .tn-atom{white-space:normal;background-size:cover;}}#rec2487446043 .tn-elem[data-elem-id="176340390975774690"]{color:#a07b33;text-align:center;z-index:3;top:356px;;left:calc(50% - 600px + 578px);;width:55px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="176340390975774690"] .tn-atom{vertical-align:middle;color:#a07b33;font-size:40px;font-family:'NewFonts',Arial,sans-serif;line-height:1.1;font-weight:300;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));}@media screen and (max-width:1199px){#rec2487446043 .tn-elem[data-elem-id="176340390975774690"]{display:table;left:calc(50% - 480px + 458px);;width:px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="176340390975774690"] .tn-atom{white-space:normal;background-size:cover;}}@media screen and (max-width:959px){#rec2487446043 .tn-elem[data-elem-id="176340390975774690"]{display:table;left:calc(50% - 320px + 298px);;width:px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="176340390975774690"] .tn-atom{white-space:normal;background-size:cover;}}@media screen and (max-width:639px){#rec2487446043 .tn-elem[data-elem-id="176340390975774690"]{display:table;left:calc(50% - 240px + 218px);;width:px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="176340390975774690"] .tn-atom{white-space:normal;background-size:cover;}}@media screen and (max-width:479px){#rec2487446043 .tn-elem[data-elem-id="176340390975774690"]{display:table;left:calc(50% - 160px + 138px);;width:px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="176340390975774690"] .tn-atom{white-space:normal;background-size:cover;}}#rec2487446043 .tn-elem[data-elem-id="1780142978273000001"]{z-index:3;top:566px;;left:calc(50% - 600px + 359px);;width:224px;height:auto;}#rec2487446043 .tn-elem.t396__elem--anim-hidden[data-elem-id="1780142978273000001"]{opacity:0;}#rec2487446043 .tn-elem[data-elem-id="1780142978273000001"] .tn-atom{border-radius:0px 0px 0px 0px;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;}#rec2487446043 .tn-elem[data-elem-id="1780142978273000001"] .tn-atom__img{border-radius:0px 0px 0px 0px;object-position:center center;}@media screen and (max-width:1199px){#rec2487446043 .tn-elem[data-elem-id="1780142978273000001"]{display:table;left:calc(50% - 480px + 238px);;height:auto;}}@media screen and (max-width:959px){#rec2487446043 .tn-elem[data-elem-id="1780142978273000001"]{display:table;left:calc(50% - 320px + 77px);;height:auto;}}@media screen and (max-width:639px){#rec2487446043 .tn-elem[data-elem-id="1780142978273000001"]{display:table;left:calc(50% - 240px + 2px);;height:auto;}}@media screen and (max-width:479px){#rec2487446043 .tn-elem[data-elem-id="1780142978273000001"]{display:table;top:568px;;left:calc(50% - 160px + -77px);;width:218px;height:auto;}}#rec2487446043 .tn-elem[data-elem-id="1780748451024000006"]{z-index:3;top:547px;;left:calc(50% - 600px + 605px);;width:236px;height:auto;}#rec2487446043 .tn-elem.t396__elem--anim-hidden[data-elem-id="1780748451024000006"]{opacity:0;}#rec2487446043 .tn-elem[data-elem-id="1780748451024000006"] .tn-atom{border-radius:0px 0px 0px 0px;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;}#rec2487446043 .tn-elem[data-elem-id="1780748451024000006"] .tn-atom__img{border-radius:0px 0px 0px 0px;object-position:center center;}@media screen and (max-width:1199px){#rec2487446043 .tn-elem[data-elem-id="1780748451024000006"]{display:table;left:calc(50% - 480px + 488px);;height:auto;}}@media screen and (max-width:959px){#rec2487446043 .tn-elem[data-elem-id="1780748451024000006"]{display:table;left:calc(50% - 320px + 327px);;height:auto;}}@media screen and (max-width:639px){#rec2487446043 .tn-elem[data-elem-id="1780748451024000006"]{display:table;left:calc(50% - 240px + 252px);;height:auto;}}@media screen and (max-width:479px){#rec2487446043 .tn-elem[data-elem-id="1780748451024000006"]{display:table;top:586px;;left:calc(50% - 160px + 198px);;width:210px;height:auto;}}#rec2487446043 .tn-elem[data-elem-id="1780144694093"]{z-index:3;top:-785px;;left:calc(50% - 600px + 280px);;width:735px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="1780144694093"] .tn-atom{border-radius:0px 0px 0px 0px;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;}#rec2487446043 .tn-elem[data-elem-id="1780144694093"] .tn-atom__img{border-radius:0px 0px 0px 0px;object-position:center center;}@media screen and (max-width:1199px){#rec2487446043 .tn-elem[data-elem-id="1780144694093"]{display:table;height:auto;}}@media screen and (max-width:959px){#rec2487446043 .tn-elem[data-elem-id="1780144694093"]{display:table;height:auto;}}@media screen and (max-width:639px){#rec2487446043 .tn-elem[data-elem-id="1780144694093"]{display:table;height:auto;}}@media screen and (max-width:479px){#rec2487446043 .tn-elem[data-elem-id="1780144694093"]{display:table;height:auto;}}#rec2487446043 .tn-elem[data-elem-id="1780748008617000003"]{color:#a67d2b;text-align:center;z-index:3;top:899px;;left:calc(50% - 600px + 320px);;width:560px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="1780748008617000003"] .tn-atom{vertical-align:middle;color:#a67d2b;font-size:41px;font-family:'NewFonts',Arial,sans-serif;line-height:1.05;font-weight:300;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));}@media screen and (max-width:1199px){#rec2487446043 .tn-elem[data-elem-id="1780748008617000003"]{display:table;top:899px;;left:calc(50% - 480px + 200px);;width:px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="1780748008617000003"] .tn-atom{white-space:normal;background-size:cover;}}@media screen and (max-width:959px){#rec2487446043 .tn-elem[data-elem-id="1780748008617000003"]{display:table;top:899px;;left:calc(50% - 320px + 40px);;width:px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="1780748008617000003"] .tn-atom{white-space:normal;background-size:cover;}}@media screen and (max-width:639px){#rec2487446043 .tn-elem[data-elem-id="1780748008617000003"]{display:table;top:899px;;left:calc(50% - 240px + -40px);;width:px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="1780748008617000003"] .tn-atom{white-space:normal;background-size:cover;}}@media screen and (max-width:479px){#rec2487446043 .tn-elem[data-elem-id="1780748008617000003"]{display:table;top:899px;;left:calc(50% - 160px + -120px);;width:560px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="1780748008617000003"] .tn-atom{white-space:normal;background-size:cover;}}#rec2487446043 .tn-elem[data-elem-id="1780748008617000005"]{color:#6a5140;text-align:center;z-index:3;top:1050px;;left:calc(50% - 600px + 447px);;width:307px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="1780748008617000005"] .tn-atom{vertical-align:middle;color:#6a5140;font-size:21px;font-family:'NewFonts',Arial,sans-serif;line-height:1.25;font-weight:100;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));}@media screen and (max-width:1199px){#rec2487446043 .tn-elem[data-elem-id="1780748008617000005"]{display:table;left:calc(50% - 480px + 327px);;width:px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="1780748008617000005"] .tn-atom{white-space:normal;background-size:cover;}}@media screen and (max-width:959px){#rec2487446043 .tn-elem[data-elem-id="1780748008617000005"]{display:table;top:1060px;;left:calc(50% - 320px + 167px);;width:px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="1780748008617000005"] .tn-atom{white-space:normal;background-size:cover;}}@media screen and (max-width:639px){#rec2487446043 .tn-elem[data-elem-id="1780748008617000005"]{display:table;top:1060px;;left:calc(50% - 240px + 87px);;width:px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="1780748008617000005"] .tn-atom{white-space:normal;background-size:cover;}}@media screen and (max-width:479px){#rec2487446043 .tn-elem[data-elem-id="1780748008617000005"]{display:table;top:1050px;;left:calc(50% - 160px + 7px);;width:px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="1780748008617000005"] .tn-atom{white-space:normal;background-size:cover;}}#rec2487446043 .tn-elem[data-elem-id="1782235970224000001"]{z-index:3;top:558px;;left:calc(50% - 600px + 588px);;width:25px;height:auto;}#rec2487446043 .tn-elem.t396__elem--anim-hidden[data-elem-id="1782235970224000001"]{opacity:0;}#rec2487446043 .tn-elem[data-elem-id="1782235970224000001"] .tn-atom{background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;}#rec2487446043 .tn-elem[data-elem-id="1782235970224000001"] .tn-atom__vector svg{display:block;}@media screen and (max-width:1199px){#rec2487446043 .tn-elem[data-elem-id="1782235970224000001"]{display:table;left:calc(50% - 480px + 468px);;height:auto;}}@media screen and (max-width:959px){#rec2487446043 .tn-elem[data-elem-id="1782235970224000001"]{display:table;left:calc(50% - 320px + 308px);;height:auto;}}@media screen and (max-width:639px){#rec2487446043 .tn-elem[data-elem-id="1782235970224000001"]{display:table;left:calc(50% - 240px + 228px);;height:auto;}}@media screen and (max-width:479px){#rec2487446043 .tn-elem[data-elem-id="1782235970224000001"]{display:table;left:calc(50% - 160px + 148px);;height:auto;}}#rec2487446043 .tn-elem[data-elem-id="1782235970225000002"]{color:#a67d2b;text-align:CENTER;z-index:3;top:518px;;left:calc(50% - 600px + 442px);;width:316px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="1782235970225000002"] .tn-atom{vertical-align:middle;color:#a67d2b;font-size:32px;font-family:'NewFonts',Arial,sans-serif;line-height:1.1;font-weight:300;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;--t396-shadow-text-opacity:100%;text-shadow:var(--t396-shadow-text-x,0px) var(--t396-shadow-text-y,0px) var(--t396-shadow-text-blur,0px) rgba(var(--t396-shadow-text-color),var(--t396-shadow-text-opacity,100%));}@media screen and (max-width:1199px){#rec2487446043 .tn-elem[data-elem-id="1782235970225000002"]{display:table;left:calc(50% - 480px + 322px);;width:px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="1782235970225000002"] .tn-atom{white-space:normal;background-size:cover;}}@media screen and (max-width:959px){#rec2487446043 .tn-elem[data-elem-id="1782235970225000002"]{display:table;left:calc(50% - 320px + 162px);;width:px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="1782235970225000002"] .tn-atom{white-space:normal;background-size:cover;}}@media screen and (max-width:639px){#rec2487446043 .tn-elem[data-elem-id="1782235970225000002"]{display:table;left:calc(50% - 240px + 82px);;width:px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="1782235970225000002"] .tn-atom{white-space:normal;background-size:cover;}}@media screen and (max-width:479px){#rec2487446043 .tn-elem[data-elem-id="1782235970225000002"]{display:table;left:calc(50% - 160px + 2px);;width:px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="1782235970225000002"] .tn-atom{white-space:normal;background-size:cover;}}#rec2487446043 .tn-elem[data-elem-id="1782312134224"]{z-index:3;top:813px;;left:calc(50% - 600px + 459px);;width:283px;height:auto;}#rec2487446043 .tn-elem[data-elem-id="1782312134224"] .tn-atom{border-radius:0px 0px 0px 0px;background-position:center center;border-width:var(--t396-borderwidth,0);border-style:var(--t396-borderstyle,solid);border-color:var(--t396-bordercolor,transparent);transition:background-color var(--t396-speedhover,0s) ease-in-out,color var(--t396-speedhover,0s) ease-in-out,border-color var(--t396-speedhover,0s) ease-in-out,box-shadow var(--t396-shadowshoverspeed,0.2s) ease-in-out;}#rec2487446043 .tn-elem[data-elem-id="1782312134224"] .tn-atom__img{border-radius:0px 0px 0px 0px;object-position:center center;}@media screen and (max-width:1199px){#rec2487446043 .tn-elem[data-elem-id="1782312134224"]{display:table;left:calc(50% - 480px + 339px);;height:auto;}}@media screen and (max-width:959px){#rec2487446043 .tn-elem[data-elem-id="1782312134224"]{display:table;left:calc(50% - 320px + 179px);;height:auto;}}@media screen and (max-width:639px){#rec2487446043 .tn-elem[data-elem-id="1782312134224"]{display:table;left:calc(50% - 240px + 99px);;height:auto;}}@media screen and (max-width:479px){#rec2487446043 .tn-elem[data-elem-id="1782312134224"]{display:table;left:calc(50% - 160px + 19px);;height:auto;}}</style> <div class='t396'> <div class="t396__artboard" data-artboard-recid="2487446043" data-artboard-screens="320,480,640,960,1200" data-artboard-height="1240" data-artboard-valign="center" data-artboard-upscale="grid" data-artboard-height-res-320="1240"> <div class="t396__carrier" data-artboard-recid="2487446043"></div> <div class="t396__filter" data-artboard-recid="2487446043"></div> <div class='t396__elem tn-elem tn-elem__24874460431773841348614000001' data-elem-id='1773841348614000001' data-elem-type='html' data-field-top-value="0" data-field-left-value="375" data-field-height-value="762" data-field-width-value="450" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-mobile="y" data-field-widthmode-value="fixed" data-field-left-res-320-value="-65" data-field-height-res-320-value="492" data-field-width-res-320-value="450" data-field-widthmode-res-320-value="fixed" data-field-left-res-480-value="15" data-field-width-res-480-value="450" data-field-widthmode-res-480-value="fixed" data-field-top-res-640-value="0" data-field-left-res-640-value="95" data-field-width-res-640-value="450" data-field-widthmode-res-640-value="fixed" data-field-top-res-960-value="0" data-field-left-res-960-value="255" data-field-height-res-960-value="491" data-field-width-res-960-value="450" data-field-container-res-960-value="grid" data-field-widthmode-res-960-value="fixed"> <div class='tn-atom tn-atom__html'> <video autoplay muted loop playsinline webkit-playsinline x5-playsinline style="width: 100%; height: 100%; min-height: 100%; object-fit: cover; display: block;"> <source src="media/Swans2.mov" type="video/mp4"> <source src="media/Swans2.mov" type="video/quicktime">
+Your browser does not support the video tag.
+</video> </div> </div> <div class='t396__elem tn-elem tn-elem__24874460431763402091707' data-elem-id='1763402091707' data-elem-type='shape' data-field-top-value="0" data-field-left-value="375" data-field-height-value="676" data-field-width-value="450" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-widthmode-value="fixed" data-field-left-res-320-value="-65" data-field-left-res-480-value="15" data-field-left-res-640-value="95" data-field-left-res-960-value="255"> <div class='tn-atom'> </div> </div> <div class='t396__elem tn-elem tn-elem__24874460431779527203760000001' data-elem-id='1779527203760000001' data-elem-type='image' data-field-top-value="753" data-field-left-value="228" data-field-height-value="487" data-field-width-value="744" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-filewidth-value="1680" data-field-fileheight-value="833" data-field-heightmode-value="fixed" data-field-top-res-320-value="763" data-field-left-res-320-value="-212" data-field-height-res-320-value="477" data-field-heightmode-res-320-value="fixed" data-field-top-res-480-value="763" data-field-left-res-480-value="-132" data-field-height-res-480-value="470" data-field-heightmode-res-480-value="fixed" data-field-top-res-640-value="763" data-field-left-res-640-value="-52" data-field-height-res-640-value="477" data-field-heightmode-res-640-value="fixed" data-field-top-res-960-value="758" data-field-left-res-960-value="108" data-field-height-res-960-value="479" data-field-heightmode-res-960-value="fixed"> <div class='tn-atom'> <img class='tn-atom__img t-img' data-original='images/cdn/623915249_2629494717_3.png' src='images/cdn/623915249_2629494717_3.png' alt='' imgfield='' /> </div> </div> <div class='t396__elem tn-elem js-delay-anim tn-elem__24874460431763402147625 t-animate' data-elem-id='1763402147625' data-elem-type='text' data-field-top-value="294" data-field-left-value="320" data-field-height-value="168" data-field-width-value="560" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="fadeinup" data-animate-duration="2" data-animate-delay="3" data-animate-distance="30" data-animate-mobile="y" data-field-textfit-value="autoheight" data-field-fontsize-value="80" data-field-left-res-320-value="-120" data-field-left-res-480-value="-40" data-field-left-res-640-value="40" data-field-left-res-960-value="200"> <div class='tn-atom'field='tn_text_1763402147625'>Nabila <br /><br />Abhishek</div> </div> <div class='t396__elem tn-elem js-delay-anim tn-elem__2487446043176340398328864790 t-animate' data-elem-id='176340398328864790' data-elem-type='text' data-field-top-value="154" data-field-left-value="320" data-field-height-value="37" data-field-width-value="560" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="fadeinup" data-animate-duration="2" data-animate-delay="3" data-animate-distance="30" data-animate-mobile="y" data-field-textfit-value="fixedsize" data-field-fontsize-value="40" data-field-left-res-320-value="-120" data-field-left-res-480-value="-40" data-field-left-res-640-value="40" data-field-left-res-960-value="200"> <div class='tn-atom'field='tn_text_176340398328864790'>Wedding Day</div> </div> <div class='t396__elem tn-elem js-delay-anim tn-elem__2487446043176340401720454780 t-animate' data-elem-id='176340401720454780' data-elem-type='text' data-field-top-value="196" data-field-left-value="320" data-field-height-value="37" data-field-width-value="560" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="fadeinup" data-animate-duration="2" data-animate-delay="3" data-animate-distance="30" data-animate-mobile="y" data-field-textfit-value="fixedsize" data-field-fontsize-value="25" data-field-left-res-320-value="-120" data-field-left-res-480-value="-40" data-field-left-res-640-value="40" data-field-left-res-960-value="200"> <div class='tn-atom'field='tn_text_176340401720454780'>17.10.26</div> </div> <div class='t396__elem tn-elem js-delay-anim tn-elem__2487446043176340390975774690 t-animate' data-elem-id='176340390975774690' data-elem-type='text' data-field-top-value="356" data-field-left-value="578" data-field-height-value="44" data-field-width-value="55" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="fadeinup" data-animate-duration="2" data-animate-delay="3" data-animate-distance="30" data-animate-mobile="y" data-field-textfit-value="autoheight" data-field-fontsize-value="40" data-field-left-res-320-value="138" data-field-left-res-480-value="218" data-field-left-res-640-value="298" data-field-left-res-960-value="458"> <div class='tn-atom'field='tn_text_176340390975774690'>&amp;</div> </div> <div class='t396__elem tn-elem tn-elem__24874460431780142978273000001 ' data-elem-id='1780142978273000001' data-elem-type='image' data-field-top-value="566" data-field-left-value="359" data-field-height-value="343" data-field-width-value="224" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-mobile="y" data-animate-sbs-event="intoview" data-animate-sbs-trg="1" data-animate-sbs-trgofst="0" data-animate-sbs-loop="loop" data-animate-sbs-opts="[{'mx':0,'my':0,'sx':1,'sy':1,'op':1,'ro':0,'ti':0,'ea':'0','dt':0},{'mx':0,'my':0,'sx':1.06,'sy':1.06,'op':1,'ro':2,'ti':2000,'ea':'0','dt':0},{'mx':0,'my':0,'sx':1,'sy':1,'op':1,'ro':0,'ti':2000,'ea':'0','dt':0}]" data-field-filewidth-value="823" data-field-fileheight-value="1260" data-field-heightmode-value="hug" data-field-top-res-320-value="568" data-field-left-res-320-value="-77" data-field-height-res-320-value="334" data-field-width-res-320-value="218" data-field-left-res-480-value="2" data-field-height-res-480-value="343" data-field-left-res-640-value="77" data-field-height-res-640-value="343" data-field-left-res-960-value="238" data-field-height-res-960-value="343"> <div class='tn-atom'> <img class='tn-atom__img t-img' data-original='images/cdn/noroot_3.png' src='images/cdn/noroot_3.png' alt='' imgfield='' /> </div> </div> <div class='t396__elem tn-elem tn-elem__24874460431780748451024000006 ' data-elem-id='1780748451024000006' data-elem-type='image' data-field-top-value="547" data-field-left-value="605" data-field-height-value="359" data-field-width-value="236" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-mobile="y" data-animate-sbs-event="intoview" data-animate-sbs-trg="1" data-animate-sbs-trgofst="0" data-animate-sbs-loop="loop" data-animate-sbs-opts="[{'mx':0,'my':0,'sx':1,'sy':1,'op':1,'ro':0,'ti':0,'ea':'0','dt':0},{'mx':0,'my':0,'sx':1.04,'sy':1.04,'op':1,'ro':-2,'ti':2000,'ea':'0','dt':0},{'mx':0,'my':0,'sx':1,'sy':1,'op':1,'ro':0,'ti':2000,'ea':'0','dt':0}]" data-field-filewidth-value="829" data-field-fileheight-value="1260" data-field-heightmode-value="hug" data-field-top-res-320-value="586" data-field-left-res-320-value="198" data-field-height-res-320-value="319" data-field-width-res-320-value="210" data-field-left-res-480-value="252" data-field-height-res-480-value="359" data-field-left-res-640-value="327" data-field-height-res-640-value="359" data-field-left-res-960-value="488" data-field-height-res-960-value="359"> <div class='tn-atom'> <img class='tn-atom__img t-img' data-original='images/cdn/noroot_2.png' src='images/cdn/noroot_2.png' alt='' imgfield='' /> </div> </div> <div class='t396__elem tn-elem tn-elem__24874460431780144694093' data-elem-id='1780144694093' data-elem-type='image' data-field-top-value="-785" data-field-left-value="280" data-field-height-value="735" data-field-width-value="735" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-filewidth-value="1512" data-field-fileheight-value="1512" data-field-heightmode-value="hug" data-field-height-res-320-value="735" data-field-height-res-480-value="735" data-field-height-res-640-value="735" data-field-height-res-960-value="735"> <div class='tn-atom'> <img class='tn-atom__img t-img' data-original='images/cdn/623915249_2629494717_1.png' src='images/cdn/623915249_2629494717_1.png' alt='' imgfield='' /> </div> </div> <div class='t396__elem tn-elem tn-elem__24874460431780748008617000003 t-animate' data-elem-id='1780748008617000003' data-elem-type='text' data-field-top-value="899" data-field-left-value="320" data-field-height-value="129" data-field-width-value="560" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="fadein" data-animate-duration="1" data-animate-mobile="y" data-field-textfit-value="autoheight" data-field-fontsize-value="41" data-field-top-res-320-value="899" data-field-left-res-320-value="-120" data-field-height-res-320-value="129" data-field-width-res-320-value="560" data-field-top-res-480-value="899" data-field-left-res-480-value="-40" data-field-top-res-640-value="899" data-field-left-res-640-value="40" data-field-top-res-960-value="899" data-field-left-res-960-value="200"> <div class='tn-atom'field='tn_text_1780748008617000003'>“I have found the one whom my soul loves.”<br /><span class="bible-verse-cite">— Song of Solomon 3:4</span></div> </div> <div class='t396__elem tn-elem tn-elem__24874460431780748008617000005 t-animate' data-elem-id='1780748008617000005' data-elem-type='text' data-field-top-value="1050" data-field-left-value="447" data-field-height-value="104" data-field-width-value="307" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-style="fadein" data-animate-duration="2" data-animate-delay="0.2" data-animate-mobile="y" data-field-textfit-value="autoheight" data-field-fontsize-value="21" data-field-top-res-320-value="1050" data-field-left-res-320-value="7" data-field-top-res-480-value="1060" data-field-left-res-480-value="87" data-field-top-res-640-value="1060" data-field-left-res-640-value="167" data-field-left-res-960-value="327"> <div class='tn-atom'field='tn_text_1780748008617000005'>Dear Friends and Family <br />Join us for five unforgettable celebrations of love, laughter, and lifelong memories as we begin our forever.</div> </div> <div class='t396__elem tn-elem tn-elem__24874460431782235970224000001 ' data-elem-id='1782235970224000001' data-elem-type='vector' data-field-top-value="558" data-field-left-value="588" data-field-height-value="16" data-field-width-value="25" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-animate-mobile="y" data-animate-sbs-event="intoview" data-animate-sbs-trg="1" data-animate-sbs-trgofst="0" data-animate-sbs-loop="loop" data-animate-sbs-opts="[{'mx':0,'my':0,'sx':1,'sy':1,'op':1,'ro':0,'ti':0,'ea':'0','dt':0},{'mx':0,'my':5,'sx':1,'sy':1,'op':1,'ro':0,'ti':600,'ea':'0','dt':0},{'mx':0,'my':0,'sx':1,'sy':1,'op':1,'ro':0,'ti':500,'ea':'0','dt':0}]" data-field-filewidth-value="25" data-field-fileheight-value="16" data-field-heightmode-value="hug" data-field-left-res-320-value="148" data-field-left-res-480-value="228" data-field-left-res-640-value="308" data-field-left-res-960-value="468"> <div class='tn-atom tn-atom__vector'> <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25.00 15.86" data-guides="{&quot;vertical&quot;:[],&quot;horizontal&quot;:[]}" role="img" aria-label=""><defs></defs><path fill="none" stroke="#937100" fill-opacity="1" stroke-width="1" stroke-opacity="1" stroke-linecap="round" id="tSvgbd3f85d542" title="Path 1" d="M1.0092 1.008C4.3691 5.4431 9.1402 9.565 12.5 14C16.8007 9.565 19.6901 5.4431 23.9908 1.008"></path></svg> </div> </div> <div class='t396__elem tn-elem tn-elem__24874460431782235970225000002' data-elem-id='1782235970225000002' data-elem-type='text' data-field-top-value="518" data-field-left-value="442" data-field-height-value="35" data-field-width-value="316" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-textfit-value="autoheight" data-field-fontsize-value="32" data-field-left-res-320-value="2" data-field-left-res-480-value="82" data-field-left-res-640-value="162" data-field-left-res-960-value="322"> <div class='tn-atom'field='tn_text_1782235970225000002'>Scroll down</div> </div> <div class='t396__elem tn-elem tn-elem__24874460431782312134224' data-elem-id='1782312134224' data-elem-type='image' style="display: none !important;" data-field-top-value="813" data-field-left-value="459" data-field-height-value="86" data-field-width-value="283" data-field-axisy-value="top" data-field-axisx-value="left" data-field-container-value="grid" data-field-topunits-value="px" data-field-leftunits-value="px" data-field-heightunits-value="px" data-field-widthunits-value="px" data-field-filewidth-value="1022" data-field-fileheight-value="312" data-field-heightmode-value="hug" data-field-left-res-320-value="19" data-field-height-res-320-value="86" data-field-left-res-480-value="99" data-field-height-res-480-value="86" data-field-left-res-640-value="179" data-field-height-res-640-value="86" data-field-left-res-960-value="339" data-field-height-res-960-value="86"> <div class='tn-atom'> <img class='tn-atom__img t-img' data-original='images/cdn/noroot_8.png' src='images/cdn/noroot_8.png' alt='' imgfield='' /> </div> </div> </div> </div> <script>t_onReady(function() {t_onFuncLoad('t396_init',function() {t396_init('2487446043');});});</script> <!-- /T396 --> </div>
       </div>
     </header>
 
@@ -344,70 +283,224 @@
 
       <div class="container container-story">
         <div class="story-header-rajwada">
-          <span class="story-pretitle-rajwada">OUR STORY</span>
-          <h2 class="story-title-rajwada">How we got here</h2>
+          <span class="story-pretitle-rajwada">OUR LOVE STORY</span>
+          <h2 class="story-title-rajwada">How We Got Here</h2>
+          <p class="story-subtitle-rajwada">Four chapters of faith, patience, and boundless love</p>
         </div>
 
-        <div class="rajwada-timeline">
-          <!-- Timeline Vertical Track Line -->
-          <div class="rajwada-timeline-line"></div>
+        <!-- Royal Interactive Chapter Quick Stepper -->
+        <div class="story-stepper-wrap" aria-label="Story Chapters Navigation">
+          <div class="story-stepper-nodes" role="tablist">
+            <button class="story-step-node active" data-scroll-to="0" type="button" role="tab" aria-selected="true" aria-label="Chapter 1: A Thousand Miles, Still Close">
+              <span class="step-badge"><i class="fa-solid fa-heart"></i></span>
+              <span class="step-label">Ch. 1</span>
+            </button>
+            <button class="story-step-node" data-scroll-to="1" type="button" role="tab" aria-selected="false" aria-label="Chapter 2: Different Places, Same Hearts">
+              <span class="step-badge"><i class="fa-solid fa-fan"></i></span>
+              <span class="step-label">Ch. 2</span>
+            </button>
+            <button class="story-step-node" data-scroll-to="2" type="button" role="tab" aria-selected="false" aria-label="Chapter 3: From Us to Forever">
+              <span class="step-badge"><i class="fa-solid fa-ring"></i></span>
+              <span class="step-label">Ch. 3</span>
+            </button>
+            <button class="story-step-node" data-scroll-to="3" type="button" role="tab" aria-selected="false" aria-label="Chapter 4: Here's to Forever">
+              <span class="step-badge"><i class="fa-solid fa-infinity"></i></span>
+              <span class="step-label">Ch. 4</span>
+            </button>
+          </div>
+        </div>
 
-          <!-- Step 1: The First Chai -->
-          <div class="rajwada-timeline-item">
-            <div class="rajwada-year-node">
-              <span>2025</span>
-            </div>
-            <div class="rajwada-card">
-              <div class="rajwada-card-media">
-                <img src="assets/story_family.jpg" alt="The First Chai - Met Through Family" class="rajwada-card-img">
-              </div>
-              <div class="rajwada-card-body">
-                <h3 class="rajwada-card-title">The first chai</h3>
-                <div class="rajwada-card-date">22nd February 2025</div>
-                <p class="rajwada-card-desc">
-                  When two families united in faith and hope, our first conversation began over a warm cup of chai. Distance dissolved into hours of shared laughter, deep values, and one conversation that refused to end.
-                </p>
-              </div>
+        <!-- Vertical Interactive Timeline with Scrolling Line & Shining Light -->
+        <div class="story-timeline-container" id="story-timeline">
+          
+          <!-- Central Interactive Royal Spine -->
+          <div class="story-scroll-spine">
+            <div class="story-scroll-track"></div>
+            <div class="story-scroll-line-fill" id="story-scroll-line-fill"></div>
+            
+            <!-- Shining Light Beacon that travels down with scrolling -->
+            <div class="story-shining-light" id="story-shining-light" aria-hidden="true">
+              <div class="shining-light-core"></div>
+              <div class="shining-light-flare"></div>
+              <div class="shining-light-spark">✦</div>
+              <div class="shining-light-tail"></div>
+              <div class="shining-light-halo"></div>
             </div>
           </div>
 
-          <!-- Step 2: First Meet in Japan -->
-          <div class="rajwada-timeline-item">
-            <div class="rajwada-year-node">
-              <span>2025</span>
-            </div>
-            <div class="rajwada-card">
-              <div class="rajwada-card-media">
-                <img src="assets/story_japan.jpg" alt="First Meet in Japan" class="rajwada-card-img">
+          <!-- Timeline Items (Chapters 1 to 4) -->
+          <div class="story-timeline-items">
+
+            <!-- Chapter 1 -->
+            <div class="story-timeline-item reached" id="story-chapter-0" data-chapter="0">
+              <div class="story-timeline-node active">
+                <div class="node-icon-wrap"><i class="fa-solid fa-heart"></i></div>
+                <span class="node-ch-badge">01</span>
+                <div class="node-pulse-ring"></div>
               </div>
-              <div class="rajwada-card-body">
-                <h3 class="rajwada-card-title">First meet in Japan</h3>
-                <div class="rajwada-card-date">13th June 2025</div>
-                <p class="rajwada-card-desc">
-                  Under the golden twilight and blooming sakura of Japan, our worlds met face to face. Walking along tranquil canals and stone lanterns, time stood still as two wandering hearts realized they had found their eternal home.
-                </p>
+
+              <div class="rajwada-card">
+                <div class="rajwada-card-media" data-full="assets/story_chapter_1.jpg" data-caption="Chapter 1 — A Thousand Miles, Still Close • 22nd February 2025">
+                  <img src="assets/story_chapter_1.jpg" alt="Chapter 1 — A Thousand Miles, Still Close" class="rajwada-card-img" loading="lazy">
+                  <button class="story-expand-badge" type="button" aria-label="View Full Illustration Artwork">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                  </button>
+                </div>
+                <div class="rajwada-card-body">
+                  <div class="story-chapter-pill"><i class="fa-solid fa-heart"></i> Chapter 1</div>
+                  <h3 class="rajwada-card-title">A Thousand Miles, Still Close</h3>
+                  <div class="rajwada-card-date"><i class="fa-regular fa-calendar"></i> 22nd February 2025</div>
+                  <div class="rajwada-card-desc">
+                    <p>
+                      Two cities. One little “Hi.”<br>
+                      Different time zones, but somehow the conversations never felt far away.<br>
+                      A simple hello became late-night talks, little smiles, and “I miss you already.”<br>
+                      Somewhere between the messages and the miles, something beautiful began.
+                    </p>
+                    <p class="story-highlight-quote">
+                      “Distance was the beginning of our story, not the end.” ❤️
+                    </p>
+                  </div>
+                  <div class="story-slide-footer">
+                    <span class="story-counter-label">Chapter 1 of 4</span>
+                    <button class="story-scroll-next-btn" type="button" data-scroll-to="1">
+                      <span>Scroll to Chapter 2</span> <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
+
+            <!-- Chapter 2 -->
+            <div class="story-timeline-item" id="story-chapter-1" data-chapter="1">
+              <div class="story-timeline-node">
+                <div class="node-icon-wrap"><i class="fa-solid fa-fan"></i></div>
+                <span class="node-ch-badge">02</span>
+                <div class="node-pulse-ring"></div>
+              </div>
+
+              <div class="rajwada-card">
+                <div class="rajwada-card-media" data-full="assets/story_chapter_2.jpg" data-caption="Chapter 2 — Different Places, Same Hearts • 13th June 2025">
+                  <img src="assets/story_chapter_2.jpg" alt="Chapter 2 — Different Places, Same Hearts" class="rajwada-card-img" loading="lazy">
+                  <button class="story-expand-badge" type="button" aria-label="View Full Illustration Artwork">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                  </button>
+                </div>
+                <div class="rajwada-card-body">
+                  <div class="story-chapter-pill"><i class="fa-solid fa-fan"></i> Chapter 2</div>
+                  <h3 class="rajwada-card-title">Different Places, Same Hearts</h3>
+                  <div class="rajwada-card-date"><i class="fa-regular fa-calendar"></i> 13th June 2025</div>
+                  <div class="rajwada-card-desc">
+                    <p>
+                      New streets. New memories. A whole new world to discover.<br>
+                      Among cherry blossoms and quiet evenings, we found our own little world.<br>
+                      Every laugh brought us closer.<br>
+                      Every moment felt a little more like home.
+                    </p>
+                    <p class="story-highlight-quote">
+                      “Because home isn't always a place — sometimes, it's a person.” 🌸
+                    </p>
+                  </div>
+                  <div class="story-slide-footer">
+                    <span class="story-counter-label">Chapter 2 of 4</span>
+                    <button class="story-scroll-next-btn" type="button" data-scroll-to="2">
+                      <span>Scroll to Chapter 3</span> <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chapter 3 -->
+            <div class="story-timeline-item" id="story-chapter-2" data-chapter="2">
+              <div class="story-timeline-node">
+                <div class="node-icon-wrap"><i class="fa-solid fa-ring"></i></div>
+                <span class="node-ch-badge">03</span>
+                <div class="node-pulse-ring"></div>
+              </div>
+
+              <div class="rajwada-card">
+                <div class="rajwada-card-media" data-full="assets/story_chapter_3.jpg" data-caption="Chapter 3 — From Us to Forever • 25th October 2025">
+                  <img src="assets/story_chapter_3.jpg" alt="Chapter 3 — From Us to Forever" class="rajwada-card-img" loading="lazy">
+                  <button class="story-expand-badge" type="button" aria-label="View Full Illustration Artwork">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                  </button>
+                </div>
+                <div class="rajwada-card-body">
+                  <div class="story-chapter-pill"><i class="fa-solid fa-ring"></i> Chapter 3</div>
+                  <h3 class="rajwada-card-title">From Us to Forever</h3>
+                  <div class="rajwada-card-date"><i class="fa-regular fa-calendar"></i> 25th October 2025</div>
+                  <div class="rajwada-card-desc">
+                    <p>
+                      What began with two people became something much bigger.<br>
+                      Families came together, traditions were shared, and a promise was made.<br>
+                      With our hands held and our hearts full, we knew this was only the beginning.
+                    </p>
+                    <p class="story-highlight-quote">
+                      “From ‘us’ to forever — officially, beautifully, together.” ❤️
+                    </p>
+                  </div>
+                  <div class="story-slide-footer">
+                    <span class="story-counter-label">Chapter 3 of 4</span>
+                    <button class="story-scroll-next-btn" type="button" data-scroll-to="3">
+                      <span>Scroll to Chapter 4</span> <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Chapter 4 -->
+            <div class="story-timeline-item" id="story-chapter-3" data-chapter="3">
+              <div class="story-timeline-node">
+                <div class="node-icon-wrap"><i class="fa-solid fa-infinity"></i></div>
+                <span class="node-ch-badge">04</span>
+                <div class="node-pulse-ring"></div>
+              </div>
+
+              <div class="rajwada-card">
+                <div class="rajwada-card-media" data-full="assets/story_chapter_4.jpg" data-caption="Chapter 4 — Here's to Forever • 17th October 2026">
+                  <img src="assets/story_chapter_4.jpg" alt="Chapter 4 — Here's to Forever" class="rajwada-card-img" loading="lazy">
+                  <button class="story-expand-badge" type="button" aria-label="View Full Illustration Artwork">
+                    <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+                  </button>
+                </div>
+                <div class="rajwada-card-body">
+                  <div class="story-chapter-pill"><i class="fa-solid fa-infinity"></i> Chapter 4</div>
+                  <h3 class="rajwada-card-title">Here's to Forever</h3>
+                  <div class="rajwada-card-date"><i class="fa-regular fa-calendar"></i> 17th October 2026</div>
+                  <div class="rajwada-card-desc">
+                    <p>
+                      Every conversation.<br>
+                      Every journey.<br>
+                      Every little moment led us here.<br>
+                      The distance became a memory, and the waiting finally became worth it.<br>
+                      Hand in hand, we stepped into the future we had dreamed about.
+                    </p>
+                    <p class="story-highlight-quote">
+                      “This isn't the end of our story — it's where forever begins.” 🤍
+                    </p>
+                  </div>
+                  <div class="story-slide-footer">
+                    <span class="story-counter-label">Chapter 4 of 4</span>
+                    <a href="#events" class="story-celebrate-link-btn">
+                      <span>Celebrate With Us</span> <i class="fa-solid fa-sparkles"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
 
-          <!-- Step 3: The Sacred Roka -->
-          <div class="rajwada-timeline-item">
-            <div class="rajwada-year-node">
-              <span>2025</span>
+          <!-- Terminal Seal at End of Timeline -->
+          <div class="story-timeline-terminal" aria-hidden="true">
+            <div class="terminal-seal">
+              <i class="fa-solid fa-infinity"></i>
             </div>
-            <div class="rajwada-card">
-              <div class="rajwada-card-media">
-                <img src="assets/story_roka.jpg" alt="The Sacred Roka" class="rajwada-card-img">
-              </div>
-              <div class="rajwada-card-body">
-                <h3 class="rajwada-card-title">The sacred roka</h3>
-                <div class="rajwada-card-date">25th October 2025</div>
-                <p class="rajwada-card-desc">
-                  Surrounded by the joyful smiles, fragrant marigolds, and warm blessings of both our families, our hands were joined in sacred commitment. A promise sealed for a lifetime, setting our hearts toward forever.
-                </p>
-              </div>
-            </div>
+            <span class="terminal-caption">Where Forever Begins • 17 October 2026</span>
           </div>
+
         </div>
       </div>
     </section>
@@ -474,27 +567,6 @@
             </div>
 
             <div class="event-card-bottom-bar">
-              <div class="event-attire-group">
-                <div class="attire-icon-wrap">
-                  <svg class="attire-dress-svg" viewBox="0 0 32 32" width="28" height="28" fill="none">
-                    <path d="M12 4C12 4 10 7 8 8L9.5 12L12 10.5V14H20V10.5L22.5 12L24 8C22 7 20 4 20 4H12Z" fill="#8B1E2F"/>
-                    <path d="M11 15L6 28C6 28 11 29 16 29C21 29 26 28 26 28L21 15H11Z" fill="#8B1E2F"/>
-                    <path d="M12 15L9 28M16 15V29M20 15L23 28" stroke="#FFFFFF" stroke-width="0.8" stroke-opacity="0.45"/>
-                  </svg>
-                </div>
-                <div class="attire-text-wrap">
-                  <div class="attire-header-row">
-                    <span class="attire-micro-label">ATTIRE</span>
-                    <div class="attire-palette" title="Suggested Color Shades">
-                      <span class="palette-dot" style="background: #E5A93C;" title="Mustard Gold"></span>
-                      <span class="palette-dot" style="background: #FFA500;" title="Marigold Orange"></span>
-                      <span class="palette-dot" style="background: #FFF8DC;" title="Sunny Ivory"></span>
-                    </div>
-                  </div>
-                  <span class="attire-description">Yellow Kurta &amp; Bright Sunny Traditional</span>
-                </div>
-              </div>
-              <div class="attire-divider"></div>
               <div class="event-card-actions">
                 <button class="btn-card-itinerary" type="button" aria-expanded="false" title="Toggle Ceremony Itinerary">
                   <i class="fa-solid fa-list-check"></i> SCHEDULE <i class="fa-solid fa-chevron-down it-chevron"></i>
@@ -579,27 +651,6 @@
             </div>
 
             <div class="event-card-bottom-bar">
-              <div class="event-attire-group">
-                <div class="attire-icon-wrap">
-                  <svg class="attire-dress-svg" viewBox="0 0 32 32" width="28" height="28" fill="none">
-                    <path d="M12 4C12 4 10 7 8 8L9.5 12L12 10.5V14H20V10.5L22.5 12L24 8C22 7 20 4 20 4H12Z" fill="#8B1E2F"/>
-                    <path d="M11 15L6 28C6 28 11 29 16 29C21 29 26 28 26 28L21 15H11Z" fill="#8B1E2F"/>
-                    <path d="M12 15L9 28M16 15V29M20 15L23 28" stroke="#FFFFFF" stroke-width="0.8" stroke-opacity="0.45"/>
-                  </svg>
-                </div>
-                <div class="attire-text-wrap">
-                  <div class="attire-header-row">
-                    <span class="attire-micro-label">ATTIRE</span>
-                    <div class="attire-palette" title="Suggested Color Shades">
-                      <span class="palette-dot" style="background: #111111;" title="Midnight Tux Black"></span>
-                      <span class="palette-dot" style="background: #C0C0C0;" title="Glittering Silver"></span>
-                      <span class="palette-dot" style="background: #3B2F44;" title="Velvet Plum"></span>
-                    </div>
-                  </div>
-                  <span class="attire-description">Black Western / Evening Club Glamour</span>
-                </div>
-              </div>
-              <div class="attire-divider"></div>
               <div class="event-card-actions">
                 <button class="btn-card-itinerary" type="button" aria-expanded="false" title="Toggle Ceremony Itinerary">
                   <i class="fa-solid fa-list-check"></i> SCHEDULE <i class="fa-solid fa-chevron-down it-chevron"></i>
@@ -684,27 +735,6 @@
             </div>
 
             <div class="event-card-bottom-bar">
-              <div class="event-attire-group">
-                <div class="attire-icon-wrap">
-                  <svg class="attire-dress-svg" viewBox="0 0 32 32" width="28" height="28" fill="none">
-                    <path d="M12 4C12 4 10 7 8 8L9.5 12L12 10.5V14H20V10.5L22.5 12L24 8C22 7 20 4 20 4H12Z" fill="#8B1E2F"/>
-                    <path d="M11 15L6 28C6 28 11 29 16 29C21 29 26 28 26 28L21 15H11Z" fill="#8B1E2F"/>
-                    <path d="M12 15L9 28M16 15V29M20 15L23 28" stroke="#FFFFFF" stroke-width="0.8" stroke-opacity="0.45"/>
-                  </svg>
-                </div>
-                <div class="attire-text-wrap">
-                  <div class="attire-header-row">
-                    <span class="attire-micro-label">ATTIRE</span>
-                    <div class="attire-palette" title="Suggested Color Shades">
-                      <span class="palette-dot" style="background: #FFFFFF; border: 1px solid #ddd;" title="Pristine White"></span>
-                      <span class="palette-dot" style="background: #F4E7D7;" title="Champagne Cream"></span>
-                      <span class="palette-dot" style="background: #E8D3D1;" title="Blush Pastel"></span>
-                    </div>
-                  </div>
-                  <span class="attire-description">Pristine Pastels / Formal Suits &amp; Gowns</span>
-                </div>
-              </div>
-              <div class="attire-divider"></div>
               <div class="event-card-actions">
                 <button class="btn-card-itinerary" type="button" aria-expanded="false" title="Toggle Ceremony Itinerary">
                   <i class="fa-solid fa-list-check"></i> SCHEDULE <i class="fa-solid fa-chevron-down it-chevron"></i>
@@ -767,7 +797,7 @@
                   <span>CELEBRATION 04</span>
                 </div>
                 <div class="event-top-actions">
-                  <div class="event-countdown-pill" data-event-date="2026-10-17T19:00:00" title="Celebration Countdown">
+                  <div class="event-countdown-pill" data-event-date="2026-10-17T15:00:00" title="Celebration Countdown">
                     <i class="fa-regular fa-clock"></i> <span class="cd-text">Oct 17</span>
                   </div>
                   <button class="event-hero-expand-btn" type="button" aria-label="Enlarge Morni Reception illustration" title="View Full Artwork" data-full="assets/morni_reception_retina.png" data-caption="Morni Grand Reception — “The vows have been spoken, now let the celebration begin.”">
@@ -789,39 +819,18 @@
                   <i class="fa-regular fa-calendar-plus date-pill-icon"></i>
                   <div class="date-pill-text">
                     <span class="date-pill-day">17 OCT</span>
-                    <span class="date-pill-time">EVENING</span>
+                    <span class="date-pill-time">3:00 PM</span>
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="event-card-bottom-bar">
-              <div class="event-attire-group">
-                <div class="attire-icon-wrap">
-                  <svg class="attire-dress-svg" viewBox="0 0 32 32" width="28" height="28" fill="none">
-                    <path d="M12 4C12 4 10 7 8 8L9.5 12L12 10.5V14H20V10.5L22.5 12L24 8C22 7 20 4 20 4H12Z" fill="#8B1E2F"/>
-                    <path d="M11 15L6 28C6 28 11 29 16 29C21 29 26 28 26 28L21 15H11Z" fill="#8B1E2F"/>
-                    <path d="M12 15L9 28M16 15V29M20 15L23 28" stroke="#FFFFFF" stroke-width="0.8" stroke-opacity="0.45"/>
-                  </svg>
-                </div>
-                <div class="attire-text-wrap">
-                  <div class="attire-header-row">
-                    <span class="attire-micro-label">ATTIRE</span>
-                    <div class="attire-palette" title="Suggested Color Shades">
-                      <span class="palette-dot" style="background: #5C1D24;" title="Wine Burgundy"></span>
-                      <span class="palette-dot" style="background: #BBA0CA;" title="Royal Lavender"></span>
-                      <span class="palette-dot" style="background: #D4AF37;" title="Warm Gold"></span>
-                    </div>
-                  </div>
-                  <span class="attire-description">Wine Lehenga &amp; Lavender Royal Sherwani</span>
-                </div>
-              </div>
-              <div class="attire-divider"></div>
               <div class="event-card-actions">
                 <button class="btn-card-itinerary" type="button" aria-expanded="false" title="Toggle Ceremony Itinerary">
                   <i class="fa-solid fa-list-check"></i> SCHEDULE <i class="fa-solid fa-chevron-down it-chevron"></i>
                 </button>
-                <button class="btn-card-add cal-btn" data-title="Morni Grand Reception | Nabila & Abhishek" data-start="2026-10-17T19:00:00" data-end="2026-10-17T23:45:00" data-location="Albion Farms, Morni Hills" title="Add to Calendar">
+                <button class="btn-card-add cal-btn" data-title="Morni Grand Reception | Nabila & Abhishek" data-start="2026-10-17T15:00:00" data-end="2026-10-17T23:45:00" data-location="Albion Farms, Morni Hills" title="Add to Calendar">
                   <i class="fa-regular fa-calendar-plus"></i> ADD
                 </button>
                 <a href="https://share.google/f7U3PLcKP9EvTZAcA" target="_blank" rel="noopener noreferrer" class="btn-card-map" title="Navigate on Google Maps">
@@ -834,20 +843,26 @@
             <div class="event-itinerary-drawer">
               <div class="itinerary-timeline">
                 <div class="itinerary-step">
-                  <div class="step-time-badge">07:00 PM</div>
+                  <div class="step-time-badge">03:00 PM</div>
                   <div class="step-details">
-                    <strong class="step-title">Sunset Welcome &amp; Toasts</strong>
-                    <p class="step-desc">Mountain breeze cocktails, canapés, and live acoustic melodies</p>
+                    <strong class="step-title">Welcome Reception &amp; High Tea</strong>
+                    <p class="step-desc">Mountain breeze refreshments, canapés, and live acoustic melodies</p>
                   </div>
                 </div>
                 <div class="itinerary-step">
-                  <div class="step-time-badge">08:00 PM</div>
+                  <div class="step-time-badge">04:30 PM</div>
                   <div class="step-details">
                     <strong class="step-title">Grand Couple Entrance &amp; Cake</strong>
-                    <p class="step-desc">Dramatic starlight entrance of the bride &amp; groom, cake cutting &amp; champagne toast</p>
+                    <p class="step-desc">Dramatic starlight entrance of the bride &amp; groom, cake cutting &amp; celebrations</p>
                   </div>
                 </div>
                 <div class="itinerary-step">
+                  <div class="step-time-badge">07:00 PM</div>
+                  <div class="step-details">
+                    <strong class="step-title">Starlight Gala Banquet &amp; Music</strong>
+                    <p class="step-desc">Fine gourmet dinner under fairy lights, warm speeches, and dancing under the stars</p>
+                  </div>
+                </div>
                   <div class="step-time-badge">08:45 PM</div>
                   <div class="step-details">
                     <strong class="step-title">Starlight Gala Banquet &amp; Music</strong>
@@ -901,27 +916,6 @@
             </div>
 
             <div class="event-card-bottom-bar">
-              <div class="event-attire-group">
-                <div class="attire-icon-wrap">
-                  <svg class="attire-dress-svg" viewBox="0 0 32 32" width="28" height="28" fill="none">
-                    <path d="M12 4C12 4 10 7 8 8L9.5 12L12 10.5V14H20V10.5L22.5 12L24 8C22 7 20 4 20 4H12Z" fill="#8B1E2F"/>
-                    <path d="M11 15L6 28C6 28 11 29 16 29C21 29 26 28 26 28L21 15H11Z" fill="#8B1E2F"/>
-                    <path d="M12 15L9 28M16 15V29M20 15L23 28" stroke="#FFFFFF" stroke-width="0.8" stroke-opacity="0.45"/>
-                  </svg>
-                </div>
-                <div class="attire-text-wrap">
-                  <div class="attire-header-row">
-                    <span class="attire-micro-label">ATTIRE</span>
-                    <div class="attire-palette" title="Suggested Color Shades">
-                      <span class="palette-dot" style="background: #800A1D;" title="Regal Crimson Saree"></span>
-                      <span class="palette-dot" style="background: #1B4332;" title="Bottle Green Sherwani"></span>
-                      <span class="palette-dot" style="background: #C5A059;" title="Zardozi Gold"></span>
-                    </div>
-                  </div>
-                  <span class="attire-description">Regal Red Saree &amp; Dark Green Indo-Western</span>
-                </div>
-              </div>
-              <div class="attire-divider"></div>
               <div class="event-card-actions">
                 <button class="btn-card-itinerary" type="button" aria-expanded="false" title="Toggle Ceremony Itinerary">
                   <i class="fa-solid fa-list-check"></i> SCHEDULE <i class="fa-solid fa-chevron-down it-chevron"></i>
@@ -981,12 +975,20 @@
             <img src="assets/full_card.jpg" alt="Wedding Invitation Journey" class="gallery-thumb-img">
             <div class="gallery-hover-overlay"><i class="fa-solid fa-magnifying-glass-plus fa-2x"></i></div>
           </div>
-          <div class="gallery-thumb" data-full="assets/story_japan.jpg" data-caption="First Meet in Japan • June 2025">
-            <img src="assets/story_japan.jpg" alt="Japan Meet" class="gallery-thumb-img">
+          <div class="gallery-thumb" data-full="assets/story_chapter_1.jpg" data-caption="Chapter 1: A Thousand Miles, Still Close • February 2025">
+            <img src="assets/story_chapter_1.jpg" alt="A Thousand Miles, Still Close" class="gallery-thumb-img">
             <div class="gallery-hover-overlay"><i class="fa-solid fa-magnifying-glass-plus fa-2x"></i></div>
           </div>
-          <div class="gallery-thumb" data-full="assets/story_roka.jpg" data-caption="The Sacred Roka • October 2025">
-            <img src="assets/story_roka.jpg" alt="Roka Ceremony" class="gallery-thumb-img">
+          <div class="gallery-thumb" data-full="assets/story_chapter_2.jpg" data-caption="Chapter 2: Different Places, Same Hearts • Japan 2025">
+            <img src="assets/story_chapter_2.jpg" alt="Different Places, Same Hearts" class="gallery-thumb-img">
+            <div class="gallery-hover-overlay"><i class="fa-solid fa-magnifying-glass-plus fa-2x"></i></div>
+          </div>
+          <div class="gallery-thumb" data-full="assets/story_chapter_3.jpg" data-caption="Chapter 3: From Us to Forever • The Sacred Roka 2025">
+            <img src="assets/story_chapter_3.jpg" alt="From Us to Forever" class="gallery-thumb-img">
+            <div class="gallery-hover-overlay"><i class="fa-solid fa-magnifying-glass-plus fa-2x"></i></div>
+          </div>
+          <div class="gallery-thumb" data-full="assets/story_chapter_4.jpg" data-caption="Chapter 4: Here's to Forever • October 2026">
+            <img src="assets/story_chapter_4.jpg" alt="Here's to Forever" class="gallery-thumb-img">
             <div class="gallery-hover-overlay"><i class="fa-solid fa-magnifying-glass-plus fa-2x"></i></div>
           </div>
           <div class="gallery-thumb" data-full="assets/bride_portrait.jpg" data-caption="The Beautiful Bride • Nabila Khokhar">
@@ -1030,7 +1032,7 @@
               <div class="venue-events-hosted">
                 <strong>Hosting:</strong>
                 • The Wedding Ceremony (17 Oct, 11 AM)<br>
-                • Morni Grand Reception (17 Oct, 7 PM)
+                • Morni Grand Reception (17 Oct, 3 PM onwards)
               </div>
 
               <!-- Google Map Preview -->

@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.remove('envelope-active', 'video-active');
 
     // Ensure hero swans video is playing
-    const heroVideo = document.querySelector('.hero-arched-video');
+    const heroVideo = document.querySelector('#rec2487446043 video, .hero-arched-video');
     if (heroVideo) {
       heroVideo.play().catch(() => {});
     }
@@ -139,6 +139,22 @@ document.addEventListener('DOMContentLoaded', () => {
       audioBtn.style.visibility = 'visible';
       audioBtn.style.opacity = '1';
     }
+
+    // Hook up smooth scrolling to countdown on hero "Scroll down" prompt
+    const scrollDownElem = document.querySelector('#rec2487446043 [data-elem-id="1782235970225000002"]');
+    const chevronElem    = document.querySelector('#rec2487446043 [data-elem-id="1782235970224000001"]');
+    [scrollDownElem, chevronElem].forEach(el => {
+      if (el && !el.dataset.listenerAttached) {
+        el.dataset.listenerAttached = '1';
+        el.addEventListener('click', (e) => {
+          e.preventDefault();
+          const target = document.getElementById('countdown') || document.querySelector('.section');
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      }
+    });
   }
 
   // Trigger opening on tap or click (debounced against mobile ghost clicks)
@@ -485,7 +501,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Portrait & Event artwork hero media & expand buttons
-  const expandableMedias = document.querySelectorAll('.event-hero-media, .event-hero-expand-btn, .couple-portrait-frame, .couple-expand-btn');
+  const expandableMedias = document.querySelectorAll('.event-hero-media, .event-hero-expand-btn, .couple-portrait-frame, .couple-expand-btn, .rajwada-card-media, .story-expand-badge');
   expandableMedias.forEach(elem => {
     elem.addEventListener('click', (e) => {
       // Don't trigger if clicked on link or other interactive elements
@@ -735,5 +751,100 @@ document.addEventListener('DOMContentLoaded', () => {
 
     animateParticles();
   }
+  /* ------------------------------------------------------------------------
+     INTERACTIVE LOVE STORY SCROLLING LINE & SHINING LIGHT CONTROLLER
+     ------------------------------------------------------------------------ */
+  const timelineContainer = document.getElementById('story-timeline');
+  const lineFill          = document.getElementById('story-scroll-line-fill');
+  const shiningLight      = document.getElementById('story-shining-light');
+  const timelineItems     = document.querySelectorAll('.story-timeline-item');
+  const stepNodes         = document.querySelectorAll('.story-step-node');
+  const scrollNextBtns    = document.querySelectorAll('.story-scroll-next-btn');
+
+  function updateStoryScrollLine() {
+    if (!timelineContainer || !lineFill || !shiningLight) return;
+
+    const containerRect = timelineContainer.getBoundingClientRect();
+    const windowHeight  = window.innerHeight;
+    const triggerY      = windowHeight * 0.52; // Active focal point in viewport
+
+    const scrolledDist  = triggerY - containerRect.top;
+    const totalDist     = containerRect.height;
+
+    let progress = scrolledDist / totalDist;
+    progress = Math.max(0, Math.min(1, progress));
+
+    // Update the vertical golden line height
+    lineFill.style.height = `${(progress * 100).toFixed(2)}%`;
+
+    // Update shining light position along the vertical spine
+    shiningLight.style.top = `${(progress * 100).toFixed(2)}%`;
+    shiningLight.style.opacity = progress > 0.005 ? '1' : '0';
+
+    // Milestone chapters & active nodes
+    let latestReachedIndex = 0;
+    timelineItems.forEach((item, idx) => {
+      const node = item.querySelector('.story-timeline-node');
+      if (node) {
+        const nodeRect = node.getBoundingClientRect();
+        if (nodeRect.top <= triggerY + 24) {
+          item.classList.add('reached');
+          latestReachedIndex = idx;
+        } else {
+          item.classList.remove('reached');
+        }
+      }
+    });
+
+    // Synchronize top chapter stepper nodes
+    stepNodes.forEach((btn, idx) => {
+      const isActive = (idx === latestReachedIndex);
+      const isPassed = (idx < latestReachedIndex);
+      btn.classList.toggle('active', isActive);
+      btn.classList.toggle('passed', isPassed);
+      btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+  }
+
+  // Smooth click-to-scroll on Top Stepper Nodes
+  stepNodes.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetIdx = btn.getAttribute('data-scroll-to');
+      const targetItem = document.getElementById(`story-chapter-${targetIdx}`);
+      if (targetItem) {
+        targetItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  });
+
+  // Smooth click-to-scroll on In-Card Next Buttons
+  scrollNextBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetIdx = btn.getAttribute('data-scroll-to');
+      const targetItem = document.getElementById(`story-chapter-${targetIdx}`);
+      if (targetItem) {
+        targetItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    });
+  });
+
+  // Throttled Scroll Listener using requestAnimationFrame
+  let isStoryScrollTicking = false;
+  function handleStoryScroll() {
+    if (!isStoryScrollTicking) {
+      requestAnimationFrame(() => {
+        updateStoryScrollLine();
+        isStoryScrollTicking = false;
+      });
+      isStoryScrollTicking = true;
+    }
+  }
+
+  window.addEventListener('scroll', handleStoryScroll, { passive: true });
+  window.addEventListener('resize', handleStoryScroll, { passive: true });
+
+  // Initial calculation
+  updateStoryScrollLine();
 
 });
+
