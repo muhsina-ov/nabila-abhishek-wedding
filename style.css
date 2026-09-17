@@ -3056,15 +3056,28 @@ button {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
+}
+
+@media (max-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 380px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .gallery-thumb {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 5;
   border: 1px solid var(--gold-border-rich);
   box-shadow: var(--shadow-subtle);
   cursor: pointer;

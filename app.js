@@ -548,7 +548,7 @@ document.addEventListener('DOMContentLoaded', () => {
   galleryThumbs.forEach(thumb => {
     thumb.addEventListener('click', () => {
       const fullSrc = thumb.getAttribute('data-full');
-      const caption = thumb.querySelector('img')?.alt || 'Wedding Gallery Photo';
+      const caption = thumb.getAttribute('data-caption') || thumb.querySelector('img')?.alt || 'Wedding Gallery Photo';
       openLightbox(fullSrc, caption);
     });
   });
