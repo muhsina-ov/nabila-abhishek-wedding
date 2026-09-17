@@ -20,6 +20,63 @@ document.addEventListener('DOMContentLoaded', () => {
   let sequenceStarted = false;
   let sequenceEnded = false;
   let fallbackTimer = null;
+  let fallbackListenersAttached = false;
+
+  function updateAudioButtonState(isPlaying) {
+    if (iconPlay && iconPause) {
+      if (isPlaying) {
+        iconPlay.style.display = 'none';
+        iconPause.style.display = 'block';
+      } else {
+        iconPlay.style.display = 'block';
+        iconPause.style.display = 'none';
+      }
+    }
+  }
+
+  function playAudioSafely() {
+    if (!audio) return;
+    audio.muted = false;
+    audio.volume = 1;
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        updateAudioButtonState(true);
+        detachAudioFallbackListeners();
+      }).catch(err => {
+        console.warn('Audio autoplay prevented by browser; queued for first user touch:', err);
+        updateAudioButtonState(false);
+        attachAudioFallbackListeners();
+      });
+    }
+  }
+
+  function onUserGestureToUnlockAudio() {
+    if (audio && audio.paused) {
+      playAudioSafely();
+    }
+  }
+
+  function attachAudioFallbackListeners() {
+    if (fallbackListenersAttached) return;
+    fallbackListenersAttached = true;
+    ['click', 'touchstart', 'touchend', 'pointerdown'].forEach(evt => {
+      document.addEventListener(evt, onUserGestureToUnlockAudio, { passive: true });
+    });
+  }
+
+  function detachAudioFallbackListeners() {
+    if (!fallbackListenersAttached) return;
+    fallbackListenersAttached = false;
+    ['click', 'touchstart', 'touchend', 'pointerdown'].forEach(evt => {
+      document.removeEventListener(evt, onUserGestureToUnlockAudio);
+    });
+  }
+
+  if (audio) {
+    audio.addEventListener('play', () => updateAudioButtonState(true));
+    audio.addEventListener('pause', () => updateAudioButtonState(false));
+  }
 
   // Prepare video for strict mobile browser autoplay policies
   if (video) {
@@ -47,30 +104,31 @@ document.addEventListener('DOMContentLoaded', () => {
     if (sequenceStarted) return;
     sequenceStarted = true;
 
+    // 1. Immediately trigger audio in the synchronous user-gesture stack
+    playAudioSafely();
+
     // Lock page and ensure content is hidden until video completes
     document.body.classList.add('video-active');
     document.body.classList.add('envelope-active');
 
-    // 1. Immediately trigger video playback directly within the user interaction callstack
+    // 2. Play envelope unveiling video
     if (video) {
       video.muted = true;
+      video.defaultMuted = true;
       video.currentTime = 0;
       const playPromise = video.play();
       if (playPromise !== undefined) {
-        playPromise.then(() => {
-          // Playback confirmed started
-        }).catch(err => {
+        playPromise.catch(err => {
           console.warn('Video playback retry needed:', err);
           video.muted = true;
           video.play().catch(() => {
-            // If device policy strictly blocks video, transition smoothly after brief fallback
             setTimeout(endInvitationSequence, 1500);
           });
         });
       }
     }
 
-    // 2. Smoothly cross-fade envelope into the playing video
+    // 3. Smoothly cross-fade envelope into the playing video
     if (overlay) {
       overlay.style.opacity = '0';
       overlay.style.pointerEvents = 'none';
@@ -81,20 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (videoWrap) {
       videoWrap.classList.add('wei-video-in');
-    }
-
-    // 3. Start background wedding melody directly within user gesture
-    if (audio) {
-      audio.volume = 1;
-      const audioPromise = audio.play();
-      if (audioPromise !== undefined) {
-        audioPromise.then(() => {
-          if (iconPlay) iconPlay.style.display = 'none';
-          if (iconPause) iconPause.style.display = 'block';
-        }).catch(err => {
-          console.warn('Audio auto-playback notice:', err);
-        });
-      }
     }
 
     // 4. Safety fallback timer (Video length is ~6.0s; fallback at 6.8s ensures no guest is trapped)
@@ -210,17 +254,17 @@ document.addEventListener('DOMContentLoaded', () => {
   setTimeout(syncHeroBackgroundHeight, 400);
   setTimeout(syncHeroBackgroundHeight, 1200);
 
-  // Trigger opening on tap or click (debounced against mobile ghost clicks)
+  // Trigger opening on tap or click (supports touchstart, pointerdown, touchend, click)
   if (overlay) {
-    let touchHandled = false;
-    overlay.addEventListener('touchstart', () => {
-      touchHandled = true;
+    let handled = false;
+    const triggerStart = (e) => {
+      if (handled) return;
+      handled = true;
       startInvitationSequence();
-    }, { passive: true });
+    };
 
-    overlay.addEventListener('click', () => {
-      if (touchHandled) return;
-      startInvitationSequence();
+    ['pointerdown', 'touchstart', 'touchend', 'click'].forEach(evt => {
+      overlay.addEventListener(evt, triggerStart, { passive: true });
     });
   }
 
@@ -238,16 +282,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Floating Audio Toggle Button Handler
   if (audioBtn && audio) {
-    audioBtn.addEventListener('click', () => {
+    audioBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       if (audio.paused) {
-        audio.play().then(() => {
-          iconPlay.style.display = 'none';
-          iconPause.style.display = 'block';
-        }).catch(() => {});
+        playAudioSafely();
       } else {
         audio.pause();
-        iconPlay.style.display = 'block';
-        iconPause.style.display = 'none';
+        updateAudioButtonState(false);
       }
     });
   }
