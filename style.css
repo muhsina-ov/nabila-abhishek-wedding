@@ -1926,6 +1926,11 @@ button {
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.story-step-node .step-badge i {
+  color: #c92a2a;
+  transition: color 0.35s ease;
+}
+
 .story-step-node .step-label {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 11px;
@@ -2237,6 +2242,15 @@ button {
   line-height: 1;
 }
 
+.story-timeline-node .node-icon-wrap i {
+  color: #c92a2a;
+  transition: color 0.4s ease;
+}
+
+.story-timeline-item.reached .story-timeline-node .node-icon-wrap i {
+  color: #FFFFFF;
+}
+
 .story-timeline-node .node-ch-badge {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 9px;
@@ -2461,8 +2475,8 @@ button {
 }
 
 .story-chapter-pill i {
-  font-size: 10px;
-  color: #B3915C;
+  font-size: 11px;
+  color: #c92a2a;
 }
 
 .rajwada-card-title {
