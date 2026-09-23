@@ -4,3 +4,4 @@ WhatsApp Chat*/
 
 public/
 node_modules/
+.wrangler/
